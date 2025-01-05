@@ -1,0 +1,32 @@
+<div th:fragment="sapXep">
+	<div class="bg-white clearfix">
+
+		<div id="sort-by">
+			<label class="left hidden-xs">Sắp xếp: </label>
+			<ul>
+				<li><span class="val">Mặc định</span>
+					<ul class="ul_2">
+						<li><a href="javascript:;" onclick="sortby('default')">Mặc
+								định</a></li>
+						<li><a href="javascript:;" onclick="sortby('alpha-asc')">A
+								&rarr; Z</a></li>
+						<li><a href="javascript:;" onclick="sortby('alpha-desc')">Z
+								&rarr; A</a></li>
+						<li><a href="javascript:;" onclick="sortby('price-asc')">Giá
+								tăng dần</a></li>
+						<li><a href="javascript:;" onclick="sortby('price-desc')">Giá
+								giảm dần</a></li>
+						<li class="hidden"><a href="javascript:;"
+							onclick="sortby('created-desc')">Hàng mới nhất</a></li>
+						<li class="hidden"><a href="javascript:;"
+							onclick="sortby('created-asc')">Hàng cũ nhất</a></li>
+					</ul></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+
+
+

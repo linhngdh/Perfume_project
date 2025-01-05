@@ -1,0 +1,77 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="app-title">
+			<ul class="app-breadcrumb breadcrumb side">
+				<li class="breadcrumb-item active"><a href="#"><b>QUẢN
+							LÝ KHÁCH HÀNG</b></a></li>
+			</ul>
+			<div id="clock"></div>
+		</div>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-sm-4 text-center">
+				<label for="photo"> <img
+					ng-src="{{'/assets/account/'+form.photo}}"
+					style="max-width: 100%; height: 250px;" alt="">
+				</label>
+			</div>
+			<div class="col-sm-8">
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<div>Username</div>
+						<input ng-model="form.username" ng-disabled="usernameEdit!=''"
+							type="text" class="form-control" name="" id="">
+					</div>
+					<div class="form-group col-sm-6">
+						<div>Password</div>
+						<input ng-model="form.password" type="text" class="form-control">
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<div>Fullname</div>
+						<input ng-model="form.fullname" type="text" class="form-control">
+					</div>
+					<div class="form-group col-sm-6">
+						<div>Email</div>
+						<input ng-model="form.email" type="text" class="form-control">
+					</div>
+					<div class="form-group col-sm-6">
+						<div>So DT</div>
+						<input ng-model="form.sdt" type="text" class="form-control">
+					</div>
+					<div class="form-group col-sm-6">
+						<div>Địa Chỉ</div>
+						<input ng-model="form.diachi" type="text" class="form-control">
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-12">
+						<div>Photo</div>
+						<input accept="image/gif, image/jpeg, image/png, image/jpg"
+							onchange="angular.element(this).scope().imageChanged(this.files)"
+							type="file" class="form-control" id="photo">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="panel-footer text-center">
+	<button ng-click="create()" class="btn btn-dark"
+		ng-disabled="usernameEdit!=''">
+		<b class="glyphicon glyphicon-plus"></b> Create
+	</button>
+	<button ng-click="update()" class="btn btn-success"
+		ng-disabled="usernameEdit==''">
+		<b class="glyphicon glyphicon-save"></b> Update
+	</button>
+	<button ng-click="delete(form)" class="btn btn-danger"
+		ng-disabled="usernameEdit==''">
+		<b class="glyphicon glyphicon-trash"></b> Delete
+	</button>
+	<button ng-click="reset()" class="btn btn-info">
+		<b class="glyphicon glyphicon-refresh"></b> Reset
+	</button>
+</div>

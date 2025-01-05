@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Log in</title>
+
+<link rel="stylesheet"
+	th:href="@{/bootstrap-5.3.2-dist/css/bootstrap.min.css}">
+<script th:src="@{/bootstrap-5.3.2-dist/js/bootstrap.min.js}"></script>
+
+<link th:href="@{/img/x-icon}" rel="icon">
+
+<!-- MAIN JS  -->
+<script th:src="@{/js/jquery.js}"></script>
+<script th:src="@{/js/swiper.js}"></script>
+<script th:src="@{/js/lazy.js}"></script>
+<script th:src="@{/js/backtop.js}"></script>
+
+
+<!-- MAIN CSS  -->
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+<link th:href="@{/css/swiper.css}" rel="stylesheet">
+<link th:href="@{/css/index.css}" rel="stylesheet">
+<link th:href="@{/css/main.css}" rel="stylesheet">
+<link th:href="@{/css/product.css}" rel="stylesheet">
+<link th:href="@{/css/cart.css}" rel="stylesheet">
+<link th:href="@{/css/thongBaoCart.css}" rel="stylesheet">
+
+</head>
+<body>
+	<div class="opacity_menu"></div>
+	<!-- HEADER  -->
+	<div th:fragment="header" th:insert="~{fragments/header :: header}"></div>
+
+	<!--  NAVBAR  -->
+	<div th:fragment="navbar" th:insert="~{fragments/navbar :: navbar}"></div>
+	<script th:src="@{/js/nav.js}"></script>
+
+	<!-- PAGE -->
+	<section class="bread-crumb bg-light">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li class="home"><a href="/"><span>Trang chủ</span></a> <span
+					class="mr_lr">&nbsp;<svg aria-hidden="true"
+							focusable="false" data-prefix="fas" data-icon="chevron-right"
+							role="img" xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 320 512"
+							class="svg-inline--fa fa-chevron-right fa-w-10">
+                                <path fill="currentColor"
+								d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+								class></path>
+                            </svg>&nbsp;
+				</span></li>
+
+				<li><strong><span>Đăng nhập tài khoản</span></strong></li>
+
+			</ul>
+		</div>
+	</section>
+	<section class="section bg-light">
+		<div class="container">
+			<div class="wrap_background_aside page_login">
+				<div class="row">
+					<div
+						class="col-lg-4 col-md-6 col-sm-12 col-xl-4 offset-0 offset-xl-4 offset-lg-4 offset-md-3 offset-xl-3 col-12">
+						<div class="row">
+							<div class="page-login pagecustome clearfix">
+								<div class="wpx">
+									<ul class="auth-block__menu-list">
+										<li class="active"><a th:href="@{/home/login}" title="Đăng nhập">Đăng
+												nhập</a></li>
+										<li><a th:href="@{/register}" title="Đăng ký">Đăng ký</a></li>
+									</ul>
+									<h1 class="title_heads a-center">
+										<span>Đăng nhập</span>
+									</h1>
+									<div id="login" class="section">
+										<form th:action="@{/security/login}" method="post"
+											id="customer_login" accept-charset="UTF-8">
+											<input name="FormType" type="hidden" value="customer_login"><input
+												name="utf8" type="hidden" value="true"> <span
+												class="form-signup" style="color: red;"> </span>
+											<div class="form-signup clearfix">
+												<fieldset class="form-group">
+													<input type="text"
+														pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"
+														class="form-control form-control-lg" name="username"
+														 placeholder="Username" required>
+												</fieldset>
+												<fieldset class="form-group">
+													<input type="password" class="form-control form-control-lg"
+														value name="password"
+														placeholder="Mật khẩu" required>
+												</fieldset>
+												<div class="pull-xs-left">
+													<input class="btn btn-style btn_50" type="submit"
+														value="Đăng nhập"> <span
+														class="block a-center quenmk">Quên mật khẩu</span>
+												</div>
+											</div>
+										</form>
+									</div>
+
+									<div class="h_recover" style="display: none;">
+										<div id="recover-password" class="form-signup page-login">
+											<form method="post" action="/account/recover"
+												id="recover_customer_password" accept-charset="UTF-8">
+												<input name="FormType" type="hidden"
+													value="recover_customer_password"><input
+													name="utf8" type="hidden" value="true">
+												<div class="form-signup" style="color: red;"></div>
+												<div class="form-signup clearfix">
+													<fieldset class="form-group">
+														<input type="email"
+															pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"
+															class="form-control form-control-lg" value name="Email"
+															id="recover-email" placeholder="Email" required>
+													</fieldset>
+												</div>
+												<div class="action_bottom">
+													<input class="btn btn-style btn_50"
+														style="margin-top: 0px;" type="submit"
+														value="Lấy lại mật khẩu">
+
+												</div>
+											</form>
+										</div>
+									</div>
+									<div class="block social-login--facebooks">
+										<p class="a-center">Hoặc đăng nhập bằng</p>
+										<script>
+											function loginFacebook() {
+												var a = {
+													client_id : "947410958642584",
+													redirect_uri : "https://store.mysapo.net/account/facebook_account_callback",
+													state : JSON
+															.stringify({
+																redirect_url : window.location.href
+															}),
+													scope : "email",
+													response_type : "code"
+												}, b = "https://www.facebook.com/v3.2/dialog/oauth"
+														+ encodeURIParams(a, !0);
+												window.location.href = b
+											}
+											function loginGoogle() {
+												var a = {
+													client_id : "997675985899-pu3vhvc2rngfcuqgh5ddgt7mpibgrasr.apps.googleusercontent.com",
+													redirect_uri : "https://store.mysapo.net/account/google_account_callback",
+													scope : "email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile",
+													access_type : "online",
+													state : JSON
+															.stringify({
+																redirect_url : window.location.href
+															}),
+													response_type : "code"
+												}, b = "https://accounts.google.com/o/oauth2/v2/auth"
+														+ encodeURIParams(a, !0);
+												window.location.href = b
+											}
+											function encodeURIParams(a, b) {
+												var c = [];
+												for ( var d in a)
+													if (a.hasOwnProperty(d)) {
+														var e = a[d];
+														null != e
+																&& c
+																		.push(encodeURIComponent(d)
+																				+ "="
+																				+ encodeURIComponent(e))
+													}
+												return 0 == c.length ? ""
+														: (b ? "?" : "")
+																+ c.join("&")
+											}
+										</script>
+										<a href="javascript:void(0)" class="social-login--facebook"
+											onclick="loginFacebook()"><img width="129px"
+											height="37px" alt="facebook-login-button"
+											src="//bizweb.dktcdn.net/assets/admin/images/login/fb-btn.svg"></a>
+										<a href="javascript:void(0)" class="social-login--google"
+											onclick="loginGoogle()"><img width="129px" height="37px"
+											alt="google-login-button"
+											src="//bizweb.dktcdn.net/assets/admin/images/login/gp-btn.svg"></a>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<script type="text/javascript">
+		function showRecoverPasswordForm() {
+			document.getElementById('recover-password').style.display = 'block';
+			document.getElementById('login').style.display = 'none';
+		}
+
+		function hideRecoverPasswordForm() {
+			document.getElementById('recover-password').style.display = 'none';
+			document.getElementById('login').style.display = 'block';
+		}
+
+		$('.quenmk').on('click', function() {
+			$('#login').toggleClass('hidden');
+			$('.h_recover').slideToggle();
+		});
+	</script>
+	<!-- FOOTER -->
+	<div th:fragment="footer" th:insert="~{fragments/footer :: footer}"></div>
+
+	<!-- BACKTOP -->
+	<a href="#" class="backtop" title="Lên đầu trang"> <svg
+			aria-hidden="true" focusable="false" data-prefix="far"
+			data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 320 512" class="svg-inline--fa fa-angle-up fa-w-10">
+                <path fill="currentColor"
+				d="M168.5 164.2l148 146.8c4.7 4.7 4.7 12.3 0 17l-19.8 19.8c-4.7 4.7-12.3 4.7-17 0L160 229.3 40.3 347.8c-4.7 4.7-12.3 4.7-17 0L3.5 328c-4.7-4.7-4.7-12.3 0-17l148-146.8c4.7-4.7 12.3-4.7 17 0z"
+				class></path>
+            </svg>
+	</a>
+
+</body>
+</html>

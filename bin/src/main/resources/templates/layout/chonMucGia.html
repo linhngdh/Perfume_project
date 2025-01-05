@@ -1,0 +1,108 @@
+<div th:fragment="chonMucGia">
+	<div class="filter-content">
+
+		<div class="filter-container">
+			<div class="col_title">
+				<div class="filter-container__selected-filter"
+					style="display: none;">
+					<div class="filter-container__selected-filter-header clearfix">
+						<span class="filter-container__selected-filter-header-title">
+							Bạn chọn </span>
+					</div>
+					<div class="filter-container__selected-filter-list">
+						<a href="" class="filter-container__clear-all">Bỏ hết <svg
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+								width="10" height="10" x="0" y="0" viewBox="0 0 365.696 365.696"
+								style="enable-background: new 0 0 512 512" xml:space="preserve"
+								class="">
+                                                    <g>
+                                                        <path
+									xmlns="http://www.w3.org/2000/svg"
+									d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0"
+									fill="#ffffff" data-original="#fff" style="" class="">
+                                                        </path>
+                                                    </g>
+                                                </svg></a>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+			<!-- Lọc giá -->
+
+			<aside class="aside-item filter-price">
+
+				<div class="title-head">Chọn mức giá</div>
+				<div class="aside-content_sp filter-group content_price">
+					<ul>
+						<li class="filter-item filter-item--check-box filter-item--green">
+							<span> <label data-filter="100-000d"
+								for="filter-duoi-100-000d"> <input type="checkbox"
+									id="filter-duoi-100-000d" data-group="Khoảng giá"
+									data-field="price_min" data-text="Dưới 100.000đ"
+									value="(<100000)" data-operator="OR"> <i class="fa"></i>
+									Dưới 100.000đ
+							</label>
+						</span>
+						</li>
+						<li class="filter-item filter-item--check-box filter-item--green">
+							<span> <label data-filter="200-000d"
+								for="filter-100-000d-200-000d"> <input type="checkbox"
+									id="filter-100-000d-200-000d" data-group="Khoảng giá"
+									data-field="price_min" data-text="100.000đ - 200.000đ"
+									value="(>=100000 AND <=200000)" data-operator="OR"> <i
+									class="fa"></i> Từ 100.000đ - 200.000đ
+							</label>
+						</span>
+						</li>
+						<li class="filter-item filter-item--check-box filter-item--green">
+							<span> <label data-filter="300-000d"
+								for="filter-200-000d-300-000d"> <input type="checkbox"
+									id="filter-200-000d-300-000d" data-group="Khoảng giá"
+									data-field="price_min" data-text="200.000đ - 300.000đ"
+									value="(>=200000 AND <=300000)" data-operator="OR"> <i
+									class="fa"></i> Từ 200.000đ - 300.000đ
+							</label>
+						</span>
+						</li>
+						<li class="filter-item filter-item--check-box filter-item--green">
+							<span> <label data-filter="500-000d"
+								for="filter-300-000d-500-000d"> <input type="checkbox"
+									id="filter-300-000d-500-000d" data-group="Khoảng giá"
+									data-field="price_min" data-text="300.000đ - 500.000đ"
+									value="(>=300000 AND <=500000)" data-operator="OR"> <i
+									class="fa"></i> Từ 300.000đ - 500.000đ
+							</label>
+						</span>
+						</li>
+						<li class="filter-item filter-item--check-box filter-item--green">
+							<span> <label data-filter="1-000-000d"
+								for="filter-500-000d-1-000-000d"> <input type="checkbox"
+									id="filter-500-000d-1-000-000d" data-group="Khoảng giá"
+									data-field="price_min" data-text="500.000đ - 1.000.000đ"
+									value="(>=500000 AND <=1000000)" data-operator="OR"> <i
+									class="fa"></i> Từ 500.000đ - 1 triệu
+							</label>
+						</span>
+						</li>
+						<li class="filter-item filter-item--check-box filter-item--green">
+							<span> <label data-filter="1-000-000d"
+								for="filter-tren1-000-000d"> <input type="checkbox"
+									id="filter-tren1-000-000d" data-group="Khoảng giá"
+									data-field="price_min" data-text="Trên 1.000.000đ"
+									value="(>1000000)" data-operator="OR"> <i class="fa"></i>
+									Trên 1 triệu
+							</label>
+						</span>
+						</li>
+					</ul>
+				</div>
+			</aside>
+			<div class="border_filter"></div>
+		</div>
+	</div>
+</div>
+
+
+
+

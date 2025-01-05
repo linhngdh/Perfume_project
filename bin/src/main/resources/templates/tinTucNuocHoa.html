@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link rel="stylesheet"
+	th:href="@{/bootstrap-5.3.2-dist/css/bootstrap.min.css}">
+<script th:src="@{/bootstrap-5.3.2-dist/js/bootstrap.min.js}"></script>
+
+<link th:href="@{/img/x-icon}" rel="icon">
+
+<!-- MAIN JS  -->
+<script th:src="@{/js/jquery.js}"></script>
+<script th:src="@{/js/swiper.js}"></script>
+<script th:src="@{/js/lazy.js}"></script>
+<script th:src="@{/js/backtop.js}"></script>
+
+
+<!-- MAIN CSS  -->
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+<link th:href="@{/css/swiper.css}" rel="stylesheet">
+<link th:href="@{/css/index.css}" rel="stylesheet">
+<link th:href="@{/css/main.css}" rel="stylesheet">
+<link th:href="@{/css/product.css}" rel="stylesheet">
+<link th:href="@{/css/cart.css}" rel="stylesheet">
+<link th:href="@{/css/thongBaoCart.css}" rel="stylesheet">
+</head>
+
+<body>
+	<div class="opacity_menu"></div>
+	<!-- HEADER  -->
+	<div th:fragment="header" th:insert="~{fragments/header :: header}"></div>
+
+	<!--  NAVBAR  -->
+	<div th:fragment="navbar" th:insert="~{fragments/navbar :: navbar}"></div>
+	<script th:src="@{/js/nav.js}"></script>
+
+	<!-- FAGE -->
+	<!-- BREAD-CRUMB  -->
+	<section class="bread-crumb">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li class="home"><a href="/"><span>Trang chủ</span></a> <span
+					class="mr_lr">&nbsp;<svg aria-hidden="true"
+							focusable="false" data-prefix="fas" data-icon="chevron-right"
+							role="img" xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 320 512"
+							class="svg-inline--fa fa-chevron-right fa-w-10">
+                                <path fill="currentColor"
+								d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+								class></path>
+                            </svg>&nbsp;
+				</span></li>
+
+				<li><strong><span>Tin tức nước hoa</span></strong></li>
+
+			</ul>
+		</div>
+	</section>
+
+
+	<!-- PAGE -->
+	<div class="blog_wrapper layout-blog mt-5">
+		<div class="container">
+			<div class="row">
+				<div class="right-content col-lg-9 col-12 order-lg-2">
+					<div class="box-heading  relative">
+						<h1 class="title-page title-head title-fixxx margin-top-0">Tin tức nước hoa</h1>
+
+						<!-- SẮP XẾP  -->
+						<!-- <div th:fragment="sapXep" th:insert="~{layout/sapXep :: sapXep}"></div> -->
+
+					</div>
+
+					<div class="list-blogs ">
+						<div class="list_tt">
+							<div class="item">
+								<div class="col-xs-12">
+									<article class="blog-item">
+										<div class="row">
+											<div class="col-xs-12 col-sm-4">
+												<div class="blog-item-thumbnail">
+													<a href=""> <img src="/img/tintuc/tt_1.jpg" alt="">
+
+													</a>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-8">
+												<div class="blog-item-info">
+													<h3 class="blog-item-name">
+														<a href="">TẤT TẦN TẬT VỀ CÁC NHÓM HƯƠNG TRONG NƯỚC
+															HOA (PHẦN 1)</a>
+													</h3>
+													<div class="post-time">
+														<div class="inline-block">22/10/2023</div>
+													</div>
+													<p class="blog-item-summary">“Good manners and good
+														cologne is what transforms the man into a gentleman!</p>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="col-xs-12">
+									<article class="blog-item">
+										<div class="row">
+											<div class="col-xs-12 col-sm-4">
+												<div class="blog-item-thumbnail">
+													<a href=""> <img src="/img/tintuc/tt_2.jpg" alt="">
+
+													</a>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-8">
+												<div class="blog-item-info">
+													<h3 class="blog-item-name">
+														<a href="">BẠN ĐÃ BIẾT HẾT VỀ NƯỚC HOA UNISEX CHƯA?</a>
+													</h3>
+													<div class="post-time">
+														<div class="inline-block">22/10/2023</div>
+													</div>
+													<p class="blog-item-summary">Nước hoa Unisex gần đây
+														càng được nhiều hãng nước hoa ưa chuộng cho ra mắt. Dạng
+														mùi hương thường được nằm ở phân khúc giữa. Có cả sự êm
+														dịu, dễ chịu thường được phái nữ thích. Mà cũng có những
+														tông hương gỗ và xô thơm mạnh mẽ cho phái nam.</p>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="col-xs-12">
+									<article class="blog-item">
+										<div class="row">
+											<div class="col-xs-12 col-sm-4">
+												<div class="blog-item-thumbnail">
+													<a href=""> <img src="/img/tintuc/tt_3.jpg" alt="">
+
+													</a>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-8">
+												<div class="blog-item-info">
+													<h3 class="blog-item-name">
+														<a href="">7 SAI LẦM MÀ MỌI NGƯỜI HAY “TƯỞNG” VỀ NƯỚC
+															HOA</a>
+													</h3>
+													<div class="post-time">
+														<div class="inline-block">22/10/2023</div>
+													</div>
+													<p class="blog-item-summary">Những quan niệm về nước
+														hoa mà các bạn biết có thực sự đúng? Cùng AromaBliss điểm
+														qua 7 sai lầm mà mọi người hay “tưởng” về nước hoa, để ta
+														rõ hơn về những “mặc định” này!</p>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="col-xs-12">
+									<article class="blog-item">
+										<div class="row">
+											<div class="col-xs-12 col-sm-4">
+												<div class="blog-item-thumbnail">
+													<a href=""> <img src="/img/tintuc/tt_4.jpg" alt="">
+
+													</a>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-8">
+												<div class="blog-item-info">
+													<h3 class="blog-item-name">
+														<a href="">Ý NGHĨA CỦA CÁC KÝ HIỆU VÀ THÔNG TIN TRÊN
+															CHAI NƯỚC HOA</a>
+													</h3>
+													<div class="post-time">
+														<div class="inline-block">22/10/2023</div>
+													</div>
+													<p class="blog-item-summary">Khi mua một chai nước hoa,
+														bạn sẽ thấy có rất nhiều ký hiệu cũng như thông tin được
+														in trên vỏ hộp chai nước hoa. Nhưng không phải ai cũng đọc
+														hiểu được hết ý nghĩa của những thông tin đó.</p>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="col-xs-12">
+									<article class="blog-item">
+										<div class="row">
+											<div class="col-xs-12 col-sm-4">
+												<div class="blog-item-thumbnail">
+													<a href=""> <img src="/img/tintuc/tt_5.jpg" alt="">
+
+													</a>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-8">
+												<div class="blog-item-info">
+													<h3 class="blog-item-name">
+														<a href="">NHỮNG LỢI ÍCH KHI SỬ DỤNG NƯỚC HOA MINI</a>
+													</h3>
+													<div class="post-time">
+														<div class="inline-block">22/10/2023</div>
+													</div>
+													<p class="blog-item-summary">Hiện nay nước hoa mini
+														được rất nhiều người yêu thích và sử dụng phổ biến. Vì sao
+														lại như vậy trong khi một chai nước hoa full size sử dụng
+														sẽ thích hơn chứ. Hãy cùng Missi tìm hiểu những lợi ích
+														của việc sử dụng một chai nước hoa mini nhé.</p>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="col-xs-12">
+									<article class="blog-item">
+										<div class="row">
+											<div class="col-xs-12 col-sm-4">
+												<div class="blog-item-thumbnail">
+													<a href=""> <img src="/img/tintuc/tt_6.jpg" alt="">
+
+													</a>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-8">
+												<div class="blog-item-info">
+													<h3 class="blog-item-name">
+														<a href="">NƯỚC HOA NỒNG ĐỘ COLOGNE CÓ THƠM LÂU KHÔNG?</a>
+													</h3>
+													<div class="post-time">
+														<div class="inline-block">22/10/2023</div>
+													</div>
+													<p class="blog-item-summary">Eau de Cologne / Cologne
+														là nước hoa có nồng độ tinh dầu thấp nhất trong các loại
+														(từ 2%-4% nồng độ tinh dầu, xem thêm: Nồng độ nước hoa),
+														nên hay bị đánh giá là nước hoa kém chất lượng. Hoặc ai
+														không hiểu rõ thì khi mua chai này về xài còn nói là hàng
+														giả.</p>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+
+
+						</div>
+						<ul class="listPage">
+
+						</ul>
+					</div>
+
+				</div>
+				<div
+					class="blog_left_base col-lg-3 col-12 order-lg-1 aside-content aside-content-blog">
+					<!-- DANH MỤC  -->
+					<div th:fragment="danhMuc" th:insert="~{layout/danhMuc :: danhMuc}"></div>
+
+					<!-- BÀI VIẾT MỚI  -->
+					<div th:fragment="baiVietNew"
+						th:insert="~{layout/baiVietNew :: baiVietNew}"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+            let thisPage = 1;
+            let limit = 5;
+            let list = document.querySelectorAll('.list_tt .item');
+
+            function loadItem() {
+                let beginGet = limit * (thisPage - 1);
+                let endGet = limit * thisPage - 1;
+                list.forEach((item, key) => {
+                    if (key >= beginGet && key <= endGet) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                })
+                listPage();
+            }
+            loadItem();
+            function listPage() {
+                let count = Math.ceil(list.length / limit);
+                document.querySelector('.listPage').innerHTML = '';
+
+                if (thisPage != 1) {
+                    let prev = document.createElement('li');
+                    prev.innerText = '<<';
+                    prev.setAttribute('onclick', "changePage(" + (thisPage - 1) + ")");
+                    document.querySelector('.listPage').appendChild(prev);
+                }
+
+                for (i = 1; i <= count; i++) {
+                    let newPage = document.createElement('li');
+                    newPage.innerText = i;
+                    if (i == thisPage) {
+                        newPage.classList.add('active');
+                    }
+                    newPage.setAttribute('onclick', "changePage(" + i + ")");
+                    document.querySelector('.listPage').appendChild(newPage);
+                }
+
+                if (thisPage != count) {
+                    let next = document.createElement('li');
+                    next.innerText = '>>';
+                    next.setAttribute('onclick', "changePage(" + (thisPage + 1) + ")");
+                    document.querySelector('.listPage').appendChild(next);
+                }
+            }
+            function changePage(i) {
+                thisPage = i;
+                loadItem();
+            }
+        </script>
+
+	<!-- FOOTER -->
+	<div th:fragment="footer" th:insert="~{fragments/footer :: footer}"></div>
+
+	<!-- BACKTOP -->
+	<a href="#" class="backtop" title="Lên đầu trang"> <svg
+			aria-hidden="true" focusable="false" data-prefix="far"
+			data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 320 512" class="svg-inline--fa fa-angle-up fa-w-10">
+                <path fill="currentColor"
+				d="M168.5 164.2l148 146.8c4.7 4.7 4.7 12.3 0 17l-19.8 19.8c-4.7 4.7-12.3 4.7-17 0L160 229.3 40.3 347.8c-4.7 4.7-12.3 4.7-17 0L3.5 328c-4.7-4.7-4.7-12.3 0-17l148-146.8c4.7-4.7 12.3-4.7 17 0z"
+				class></path>
+            </svg>
+	</a>
+</body>
+
+</html>

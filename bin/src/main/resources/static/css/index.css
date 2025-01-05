@@ -1,0 +1,390 @@
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba
+}
+
+.section_slider {
+    margin-bottom: 0px
+}
+
+.section_slider .home-slider .swiper-slide {
+    text-align: center
+}
+
+.section_slider .home-slider .swiper-slide img {
+    display: block;
+    margin: 0 auto
+}
+
+.section_slider .home-slider .swiper-button-next:after,
+.section_slider .home-slider .swiper-button-prev:after {
+    font-size: 20px;
+    color: #000
+}
+
+section {
+    margin-bottom: 50px
+}
+
+.section_chinhsach {
+    /* background: #55018d; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* box-shadow: 0 1px 7px #6bc499 */
+}
+
+@media (max-width: 991px) {
+    .section_chinhsach {
+        padding-top: 5px;
+        padding-bottom: 5px
+    }
+}
+
+.section_chinhsach .swiper-wrapper {
+    align-items: center
+}
+
+.section_chinhsach a {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ec2154;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.section_chinhsach a img {
+    max-height: 40px;
+    width: auto;
+    background: #ec2154;
+}
+
+.section_chinhsach a .text {
+    color: #000;
+    padding-left: 10px
+}
+
+.section_chinhsach a .text .title {
+    display: block;
+    color: #ec2154;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.section_flashsale .swiper-slide {
+    margin-bottom: 1px;
+    border: 1px #ffdbdd solid
+}
+
+.section_flashsale .title-flashsale {
+    position: relative;
+    background: #ffdbdd;
+    padding: 10px
+}
+
+@media (max-width: 767px) {
+    .section_flashsale .title-flashsale {
+        text-align: center
+    }
+}
+
+.section_flashsale .title-flashsale .title {
+    text-transform: capitalize;
+    display: inline-block;
+    margin: 0px 10px 0 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fac126
+
+}
+
+@media (max-width: 767px) {
+    .section_flashsale .title-flashsale .title {
+        font-size: 24px;
+        margin: 0px
+    }
+}
+
+@media (max-width: 767px) and (max-width: 350px) {
+    .section_flashsale .title-flashsale .title {
+        font-size: 20px
+    }
+}
+
+.section_flashsale .title-flashsale .title img {
+    height: 35px;
+    width: auto;
+    animation: 0.8s linear 0s infinite normal none running pulseSmall
+}
+
+.section_flashsale .title-flashsale .title:hover {
+    opacity: 0.7
+}
+.section_flashsale .title-flashsale .xemthem {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fac126;
+    margin-top: 10px;
+    text-decoration-line: underline;
+    text-align: right;
+    text-decoration-style: double;
+    text-transform: uppercase;
+    right: 10px;
+    top: 11px;
+    position: absolute
+}
+
+.section_flashsale .title-flashsale .xemthem:hover {
+    opacity: 0.7
+}
+
+.section_flashsale .title-flashsale .title-count-down {
+    text-transform: none;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 5px 10px 5px 10px;
+    border-left: 1px solid #ff6600
+}
+
+@media (max-width: 767px) {
+    .section_flashsale .title-flashsale .title-count-down {
+        border-left: 0
+    }
+}
+
+.section_flashsale .title-flashsale .count-down {
+    display: inline-flex;
+    font-size: 18px;
+    padding: 0;
+    background: transparent;
+    margin-bottom: 0;
+    align-items: center;
+    position: relative;
+    top: -4px
+}
+
+@media (max-width: 767px) {
+    .section_flashsale .title-flashsale .count-down {
+        top: 0;
+        margin-top: 10px
+    }
+}
+
+.section_flashsale .title-flashsale .count-down .timer-view {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 0
+}
+
+.section_flashsale .title-flashsale .count-down .timer-view .block-timer {
+    width: 35px;
+    height: 35px;
+    background: #ff424e;
+    border-radius: 5px;
+    display: inline-block;
+    color: #fff;
+    margin: 0px 3px;
+    line-height: 35px
+}
+
+.section_flashsale .title-flashsale .count-down .timer-view .block-timer p {
+    padding-top: 0px;
+    margin-bottom: 0;
+    display: block
+}
+.section_new .elio-productcount,
+.section_flashsale .elio-productcount {
+    margin-top: 10px
+}
+.section_new .elio-productcount .countdown,
+.section_flashsale .elio-productcount .countdown {
+    font-size: 12px;
+    color: #fff;
+    border-radius: 15px;
+    background: rgba(255, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    text-align: center
+}
+.section_new .elio-productcount .countdown .title,
+.section_flashsale .elio-productcount .countdown .title {
+    padding: 0 10px;
+    position: relative
+}
+.section_new .elio-productcount .countdown .line,
+.section_flashsale .elio-productcount .countdown .line {
+    background: red;
+    position: absolute;
+    top: 0;
+    bottom: 0
+}
+
+.section_danhmuc .swiper-slide {
+    margin-top: 0px !important;
+    text-align: center
+}
+
+.section_danhmuc .swiper-slide .image {
+    padding-bottom: 80%;
+    overflow: hidden;
+    height: auto;
+    display: block;
+    position: relative
+}
+
+.section_danhmuc .swiper-slide .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    transform: scale(0.9);
+    transition: transform .5s ease
+}
+
+.section_danhmuc .swiper-slide h3 {
+    font-size: 13px;
+    margin-top: -45px
+}
+
+.section_danhmuc .swiper-slide:hover .image img {
+    transform: scale(1)
+}
+
+.section_tab_product .tabs-title {
+    list-style: none;
+    background: #55018d;
+    padding: 10px
+}
+
+.section_tab_product .tabs-title .tab-link {
+    margin-bottom: 0;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    margin-right: 10px;
+    color: #fff
+}
+
+.section_tab_product .tabs-title .tab-link:last-child {
+    margin-right: 0px
+}
+
+.section_tab_product .tabs-title .tab-link span {
+    font-size: 14px;
+    position: relative
+}
+
+.section_tab_product .tabs-title .tab-link.current,
+.section_tab_product .tabs-title .tab-link:hover {
+    background: #ffffff;
+    color: #ec2154
+}
+
+@media (max-width: 1199px) {
+    .section_tab_product .tabs-title,
+    .section_tab_product .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden
+    }
+
+    .section_tab_product .tabs-title .tab-link,
+    .section_tab_product .nav .nav-item {
+        display: inline-block;
+        padding-right: 12px;
+        font-size: 15px;
+        position: relative;
+        flex: 0 0 auto;
+        white-space: nowrap;
+        margin-right: 5px
+    }
+
+    .section_tab_product .tabs-title .tab-link.current span {
+        font-size: 15px
+    }
+}
+
+/* .section_tab_product .tab-content {
+    display: none
+} */
+
+.section_tab_product .tab-content.current {
+    display: block
+}
+
+@media (max-width: 1199px) {
+    .section_tab_product .tab-content .row {
+        display: grid;
+        grid-template-rows: 1fr;
+        overflow: auto;
+        justify-content: start;
+        grid-template-columns: repeat(4, 33.33%)
+    }
+}
+
+@media (max-width: 1199px) and (max-width: 767px) {
+    .section_tab_product .tab-content .row {
+        grid-template-columns: repeat(4, 50%)
+    }
+}
+
+.section_tab_product .tab-content .see-more {
+    display: inline-block;
+    padding: 7px 20px;
+    border: 1px solid #000;
+    color: #000;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: 600
+}
+
+.section_tab_product .tab-content .see-more:hover {
+    color: #fff;
+    background: #000
+}
+
+.section_tab_product .key-pro {
+    margin-top: 20px
+}
+
+.section_tab_product .key-pro .tilte-key {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px
+}
+
+.section_tab_product .key-pro .list-search-key li {
+    display: inline-block;
+    margin-right: 5px;
+    border: 1px solid #ec2154;
+    border-radius: 20px;
+    margin-bottom: 10px
+}
+
+.section_tab_product .key-pro .list-search-key li a {
+    color: #000;
+    padding: 5px 10px;
+    display: block
+}
+
+.section_tab_product .key-pro .list-search-key li:hover {
+    background: #ec2154
+}
+
+.section_tab_product .key-pro .list-search-key li:hover a {
+    color: #fff
+}
+
+@-webkit-keyframes pulseSmall {
+    50% {
+        opacity: 0.3;
+        transform: scale(1.3)
+    }
+}

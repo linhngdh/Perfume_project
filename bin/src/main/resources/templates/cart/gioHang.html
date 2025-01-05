@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{/layout/index :: dynamic(~{::main})}">
+
+<body>
+	<main>
+	<!-- BODY  -->
+	<!-- BREAD-CRUMB  -->
+	<section class="bread-crumb">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li class="home"><a href="/"><span>Trang chủ</span></a> <span
+					class="mr_lr">&nbsp;<svg aria-hidden="true"
+							focusable="false" data-prefix="fas" data-icon="chevron-right"
+							role="img" xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 320 512"
+							class="svg-inline--fa fa-chevron-right fa-w-10">
+                                <path fill="currentColor"
+								d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+								class></path>
+                            </svg>&nbsp;
+				</span></li>
+
+				<li><strong><span>Giỏ hàng</span></strong></li>
+
+			</ul>
+		</div>
+	</section>
+
+	<!-- PAGE -->
+	<section class="page" >
+		<div class="container">
+			<section class="main-cart-page main-container col1-layout">
+				<div class="main container cartpcstyle">
+					<div class="wrap_background_aside margin-bottom-40">
+						<div class="header-cart">
+							<div class="title-block-page">
+								<h1 class="title_cart"
+									style="font-size: 22px; margin-bottom: 20px;">
+									<span>Giỏ hàng của bạn</span>
+								</h1>
+							</div>
+						</div>
+						<div class="cart-page d-xl-block d-none">
+							<div class="drawer__inner">
+								<div class="CartPageContainer">
+
+									<form action="/cart" method="post" novalidate=""
+										class="cart ajaxcart cartpage">
+										<div class="cart-header-info">
+											<div>Thông tin sản phẩm</div>
+											<div>Đơn giá</div>
+											<div>Số lượng</div>
+											<div>Thành tiền</div>
+										</div>
+										<div ng-repeat="item in cart.items" class="ajaxcart__inner ajaxcart__inner--has-fixed-footer cart_body items">
+											<div class="ajaxcart__row">
+												<div class="ajaxcart__product cart_product" data-line="1">
+													<a href="" class="ajaxcart__product-image cart_image"
+														title="Calvin Klein CK Everyone Eau de Parfum"><img
+														th:src="@{|/img/{item.image}|}"
+														alt="Calvin Klein CK Everyone Eau de Parfum"></a>
+													<div class="grid__item cart_info">
+														<div class="ajaxcart__product-name-wrapper cart_name">
+															<a href="" class="ajaxcart__product-name h4"
+																title="">{{item.product_name}}</a> 
+															<a ng-click="cart.remove(item.id)"
+																class="cart__btn-remove remove-item-cart ajaxifyCart--remove"
+																href="" data-line="1">Xóa</a>
+
+														</div>
+														<div class="grid">
+															<div class="grid__item one-half text-right cart_prices">
+																<span class="cart-price">${{item.price | number : 2}}</span>
+
+															</div>
+														</div>
+														<div class="grid">
+															<div class="grid__item one-half cart_select">
+																<div class="ajaxcart__qty input-group-btn">
+																	<button type="button"
+																		class="ajaxcart__qty-adjust ajaxcart__qty--minus items-count"
+																		data-id="" data-qty="0" data-line="1" aria-label="-">
+																		-</button>
+																	<input type="number" name="updates[]" ng-change="cart.saveToLocalStorage()" ng-model="item.qty"
+																		class="ajaxcart__qty-num number-sidebar" maxlength="3"
+																		value="1" min="0" data-id="" data-line="1"
+																		aria-label="quantity" pattern="[0-9]*">
+																	<button type="button"
+																		class="ajaxcart__qty-adjust ajaxcart__qty--plus items-count"
+																		data-id="" data-line="1" data-qty="2" aria-label="+">
+																		+</button>
+																</div>
+															</div>
+														</div>
+														<div class="grid">
+															<div class="grid__item one-half text-right cart_prices">
+																<span class="cart-price">${{item.qty*item.price|number:2}}</span>
+
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+										<div
+											class="ajaxcart__footer ajaxcart__footer--fixed cart-footer">
+											<div class="row">
+												<div
+													class="col-lg-4 col-12 offset-md-8 offset-lg-8 offset-xl-8">
+													<div class="ajaxcart__subtotal">
+														<div class="cart__subtotal">
+															<div class="cart__col-6">Tổng tiền:</div>
+															<div class="text-right cart__totle">
+																<span class="total-price">${{cart.amount|number:2}}</span>
+															</div>
+														</div>
+													</div>
+													<div class="cart__btn-proceed-checkout-dt">
+														<button type="button"
+															class="button btn btn-default cart__btn-proceed-checkout"
+															id="btn-proceed-checkout" title="Thanh toán">Thanh
+															toán</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+
+								</div>
+
+							</div>
+						</div>
+						<div class="cart-mobile-page d-block d-xl-none">
+							<div class="CartMobileContainer"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</section>
+
+
+	<!-- BACKTOP -->
+	<a href="#" class="backtop" title="Lên đầu trang"> <svg
+			aria-hidden="true" focusable="false" data-prefix="far"
+			data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 320 512" class="svg-inline--fa fa-angle-up fa-w-10">
+                <path fill="currentColor"
+				d="M168.5 164.2l148 146.8c4.7 4.7 4.7 12.3 0 17l-19.8 19.8c-4.7 4.7-12.3 4.7-17 0L160 229.3 40.3 347.8c-4.7 4.7-12.3 4.7-17 0L3.5 328c-4.7-4.7-4.7-12.3 0-17l148-146.8c4.7-4.7 12.3-4.7 17 0z"
+				class></path>
+            </svg>
+	</a>
+
+	<script src="/assets/js/shopping-cart-app.js"></script>
+	</main>
+</body>
+
+</html>

@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+	th:href="@{/bootstrap-5.3.2-dist/css/bootstrap.min.css}">
+<script th:src="@{/bootstrap-5.3.2-dist/js/bootstrap.min.js}"></script>
+
+<title>AromaBliss</title>
+<link th:href="@{/img/x-icon}" rel="icon">
+
+<!-- MAIN JS  -->
+<script th:src="@{/js/jquery.js}"></script>
+<script th:src="@{/js/swiper.js}"></script>
+<script th:src="@{/js/lazy.js}"></script>
+<script th:src="@{/js/backtop.js}"></script>
+
+
+<!-- MAIN CSS  -->
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+<link th:href="@{/css/swiper.css}" rel="stylesheet">
+<link th:href="@{/css/index.css}" rel="stylesheet">
+<link th:href="@{/css/main.css}" rel="stylesheet">
+<link th:href="@{/css/product.css}" rel="stylesheet">
+<link th:href="@{/css/cart.css}" rel="stylesheet">
+<link th:href="@{/css/thongBaoCart.css}" rel="stylesheet">
+
+
+</head>
+
+<body>
+	<div class="opacity_menu"></div>
+	<!-- HEADER  -->
+	<div th:fragment="header" th:insert="~{fragments/header :: header}"></div>
+	<!--  NAVBAR  -->
+	<div th:fragment="navbar" th:insert="~{fragments/navbar :: navbar}"></div>
+	<script th:src="@{/js/nav.js}"></script>
+
+	<!-- BODY  -->
+	<div class="bodywrap">
+		<h1 class="d-none">AromaBliss</h1>
+
+		<!-- BREAD-CRUMB  -->
+		<section class="bread-crumb">
+			<div class="container">
+				<ul class="breadcrumb">
+					<li class="home"><a href="/"><span>Trang chủ</span></a> <span
+						class="mr_lr">&nbsp;<svg aria-hidden="true"
+								focusable="false" data-prefix="fas" data-icon="chevron-right"
+								role="img" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 320 512"
+								class="svg-inline--fa fa-chevron-right fa-w-10">
+                                <path fill="currentColor"
+									d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+									class></path>
+                            </svg>&nbsp;
+					</span></li>
+
+					<li><strong><span>Thương hiệu</span></strong></li>
+
+				</ul>
+			</div>
+		</section>
+		<!-- PAGE  -->
+		<section class="page">
+			<div class="container">
+				<main id="main" class="">
+
+					<div class="row page-wrapper">
+						<div id="content" class="large-12 col" role="main">
+
+							<header class="entry-header text-center">
+								<h1 class="entry-title">Thương hiệu</h1>
+								<div class="is-divider medium"></div>
+							</header>
+
+							<div class="entry-content">
+								<div class="dnw-box-brand-product">
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_1.webp" alt="Afnan" width="300"
+													height="300" title="Afnan" class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span> Afnan </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_2.webp" alt="Al Haramain"
+													width="300" height="300" title="Al Haramain"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span> Al Haramain </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_3.jpg" alt="Alaia" width="300"
+													height="300" title="Alaia" class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span> Alaia </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_4.webp" alt="Amouage"
+													width="300" height="300" title="Amouage"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span> Amouage </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_5.jpg" alt="Armaf" width="300"
+													height="300" title="Armaf" class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Armaf </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_6.jpg" alt="Azzaro" width="300"
+													height="300" title="Azzaro" class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span> Azzaro </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_7.webp" alt="Bond No9"
+													width="300" height="300" title="Bond No9"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Bond No9 </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_8.jpg" alt="Britney Spear"
+													width="300" height="300" title="Britney Spear"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Britney Spear </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_9.webp" alt="Burberry"
+													width="300" height="300" title="Burberry"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Burberry </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_10.jpg" alt="Bvlgari"
+													width="300" height="300" title="Bvlgari"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Bvlgari </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_11.jpg" alt="Calvin Klein"
+													width="300" height="300" title="Calvin Klein"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Calvin Klein </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_12.png" alt="Carolina Herrera"
+													width="300" height="300" title="Carolina Herrera"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Carolina Herrera </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_13.jpg" alt="Chanel"
+													width="300" height="300" title="Chanel"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Chanel </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_14.png" alt="Chloé" width="300"
+													height="300" title="Chloé" class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Chloé </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_15.png" alt="Christian Dior"
+													width="300" height="300" title="Christian Dior"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Christian Dior </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_16.webp"
+													alt="Christian Louboutin" width="300" height="300"
+													title="Christian Louboutin" class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Christian Louboutin </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_17.webp" alt="Creed"
+													width="300" height="300" title="Creed"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Creed </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_18.png" alt="Davidoff"
+													width="300" height="300" title="Davidoff"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Davidoff</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_19.webp" alt="Diesel"
+													width="300" height="300" title="Diesel"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Diesel</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_20.gif" alt="DKNY" width="300"
+													height="300" title="DKNY" class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>DKNY</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_21.jpg" alt="Dolce Gabbana"
+													width="300" height="300" title="Dolce Gabbana"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Dolce Gabbana</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_22.webp" alt="Dsquared2"
+													width="300" height="300" title="Dsquared2"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Dsquared2</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_23.webp" alt="Elie Saab"
+													width="300" height="300" title="Elie Saab"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Elie Saab</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_24.jpg" alt="Elizabeth Arden"
+													width="300" height="300" title="Elizabeth Arden"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Elizabeth Arden</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_25.jpg" alt="Estée Lauder"
+													width="300" height="300" title="Estée Lauder"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Estée Lauder</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_26.webp" alt="Etat Libre"
+													width="300" height="300" title="Etat Libre"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Etat Libre</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_27.webp" alt="Ghala Zayed"
+													width="300" height="300" title="Ghala Zayed"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Ghala Zayed</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_28.jpg" alt="Giorgio Armani"
+													width="300" height="300" title="Giorgio Armani"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Giorgio Armani</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_29.png" alt="Givenchy"
+													width="300" height="300" title="Givenchy"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Givenchy</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_30.jpg" alt="Gres" width="300"
+													height="300" title="Gres" class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Gres</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_31.jpg" alt="Gucci" width="300"
+													height="300" title="Gucci" class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Gucci</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_32.webp" alt="Guess"
+													width="300" height="300" title="Guess"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Guess</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_33.jpg" alt="Hermes"
+													width="300" height="300" title="Hermes"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Hermes</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_34.jpg" alt="Hugo Boss"
+													width="300" height="300" title="Hugo Boss"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Hugo Boss</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_35.jpg" alt="Issey Miyake"
+													width="300" height="300" title="Issey Miyake"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Issey Miyake</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_36.webp"
+													alt="Jean Paul Gaultier" width="300" height="300"
+													title="Jean Paul Gaultier" class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Jean Paul Gaultier</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_37.webp" alt="Jimmy Choo"
+													width="300" height="300" title="Jimmy Choo"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Jimmy Choo</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_38.webp" alt="Jo Malone"
+													width="300" height="300" title="Jo Malone"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Jo Malone</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_39.webp" alt="Joop" width="300"
+													height="300" title="Joop" class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Joop</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_40.jpg" alt="Juicy Couture"
+													width="300" height="300" title="Juicy Couture"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Juicy Couture</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_41.webp" alt="Juliette Has A "
+													width="300" height="300" title="Juliette Has A "
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Juliette Has A </span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_42.jpg" alt="Kenzo" width="300"
+													height="300" title="Kenzo" class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Kenzo</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_43.webp" alt="Kilian"
+													width="300" height="300" title="Kilian"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Kilian</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_44.png" alt="Lacoste"
+													width="300" height="300" title="Lacoste"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Lacoste</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_45.webp" alt="Lalique"
+													width="300" height="300" title="Lalique"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Lalique</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_46.jpg" alt="LANCOME"
+													width="300" height="300" title="LANCOME"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>LANCOME</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_47.png" alt="Lanvin"
+													width="300" height="300" title="Lanvin"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Lanvin</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_48.webp" alt="Lattafa"
+													width="300" height="300" title="Lattafa"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Lattafa</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_49.webp" alt="Le Labo"
+													width="300" height="300" title="Le Labo"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Le Labo</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_50.webp" alt="Lolita Lempicka"
+													width="300" height="300" title="Lolita Lempicka"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Lolita Lempicka</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_51.webp" alt="Louis Vuitton"
+													width="300" height="300" title="Louis Vuitton"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Louis Vuitton</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_52.webp" alt="Mad et Len"
+													width="300" height="300" title="Mad et Len"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Mad et Len</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_53.webp" alt="Maison Francis"
+													width="300" height="300" title="Maison Francis"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Maison Francis</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_54.webp" alt="Martin Margiela"
+													width="300" height="300" title="Martin Margiela"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Martin Margiela</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_55.webp" alt="Mancera"
+													width="300" height="300" title="Mancera"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Mancera</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_56.jpg" alt="Marc Jacobs"
+													width="300" height="300" title="Marc Jacobs"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Marc Jacobs</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_57.webp" alt="HCM" width="300"
+													height="300" title="HCM" class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>HCM</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_58.webp" alt="Miu Miu"
+													width="300" height="300" title="Miu Miu"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Miu Miu</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_59.png" alt="Montale"
+													width="300" height="300" title="Montale"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Montale</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_60.png" alt="Montblanc"
+													width="300" height="300" title="Montblanc"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Montblanc</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_61.webp" alt="Moschino"
+													width="300" height="300" title="Moschino"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Moschino</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_62.webp" alt="Nacho Vidal"
+													width="300" height="300" title="Nacho Vidal"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Nacho Vidal</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_63.png" alt="Narciso"
+													width="300" height="300" title="Narciso"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Narciso</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_64.jpg" alt="Nautica"
+													width="300" height="300" title="Nautica"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Nautica</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_65.jpg" alt="Paco Rabanne"
+													width="300" height="300" title="Paco Rabanne"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Paco Rabanne</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_66.webp" alt="Parfums de Marly"
+													width="300" height="300" title="Parfums de Marly"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Parfums de Marly</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_67.webp" alt="Penhaligons"
+													width="300" height="300" title="Penhaligons"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Penhaligons</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_68.webp" alt="Prada"
+													width="300" height="300" title="Prada"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Prada</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_69.jpg" alt="Ralph Lauren"
+													width="300" height="300" title="Ralph Lauren"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Ralph Lauren</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_70.webp" alt="Roja" width="300"
+													height="300" title="Roja" class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Roja</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_71.webp"
+													alt="Salvatore Ferragamo" width="300" height="300"
+													title="Salvatore Ferragamo" class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Salvatore Ferragamo</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_72.webp"
+													alt="The Merchant of Venice" width="300" height="300"
+													title="The Merchant of Venice" class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>The Merchant of Venice</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_73.jpg" alt="Thierry Mugler"
+													width="300" height="300" title="Thierry Mugler"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Thierry Mugler</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_74.webp" alt="Thomas Kosmala"
+													width="300" height="300" title="Thomas Kosmala"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Thomas Kosmala</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_75.gif" alt="Tom Ford"
+													width="300" height="300" title="Tom Ford"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Tom Ford</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_76.png" alt="Tommy Hilfiger"
+													width="300" height="300" title="Tommy Hilfiger"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Tommy Hilfiger</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_77.jpg" alt="Trussardi Group"
+													width="300" height="300" title="Trussardi Group"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Trussardi Group</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_78.jpg" alt="Valentino"
+													width="300" height="300" title="Valentino"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Valentino</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_79.jpg" alt="Versace"
+													width="300" height="300" title="Versace"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Versace</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_80.png" alt="Victoria Secret"
+													width="300" height="300" title="Victoria Secret"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Victoria Secret</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_81.jpg" alt="Viktor & Rolf"
+													width="300" height="300" title="Viktor & Rolf"
+													class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Viktor & Rolf</span>
+											</div>
+										</a>
+									</div>
+									<div class="item-brand">
+										<a class="link-brand" href="">
+											<div class="box-image">
+												<img src="/img/thuonghieu/th_82.png"
+													alt="Yves Saint Laurent" width="300" height="300"
+													title="Yves Saint Laurent" class="entered lazyloaded">
+											</div>
+											<div class="box-text">
+												<span>Yves Saint Laurent</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+
+
+
+
+						</div>
+					</div>
+
+
+
+				</main>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- FOOTER -->
+	<div th:fragment="footer" th:insert="~{fragments/footer :: footer}"></div>
+	
+	<!-- BACKTOP -->
+	<a href="#" class="backtop" title="Lên đầu trang"> <svg
+			aria-hidden="true" focusable="false" data-prefix="far"
+			data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 320 512" class="svg-inline--fa fa-angle-up fa-w-10">
+                <path fill="currentColor"
+				d="M168.5 164.2l148 146.8c4.7 4.7 4.7 12.3 0 17l-19.8 19.8c-4.7 4.7-12.3 4.7-17 0L160 229.3 40.3 347.8c-4.7 4.7-12.3 4.7-17 0L3.5 328c-4.7-4.7-4.7-12.3 0-17l148-146.8c4.7-4.7 12.3-4.7 17 0z"
+				class></path>
+            </svg>
+	</a>
+
+</body>
+
+</html>

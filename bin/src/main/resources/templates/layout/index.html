@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="dynamic(main)">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" th:href="@{/bootstrap-5.3.2-dist/css/bootstrap.min.css}">
+	<script th:src="@{/bootstrap-5.3.2-dist/js/bootstrap.min.js}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+	<title>AromaBliss</title>
+	<link th:href="@{/img/Logo_web.png}" rel="icon">
+
+	<!-- MAIN JS  -->
+	<script th:src="@{/js/jquery.js}"></script>
+	<script th:src="@{/js/swiper.js}"></script>
+	<script th:src="@{/js/lazy.js}"></script>
+	<script th:src="@{/js/backtop.js}"></script>
+	<script th:src="@{/js/product-ctrl.js}"></script>
+
+	<!-- MAIN CSS  -->
+	<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+	<link th:href="@{/css/swiper.css}" rel="stylesheet">
+	<link th:href="@{/css/index.css}" rel="stylesheet">
+	<link th:href="@{/css/main.css}" rel="stylesheet">
+	<link th:href="@{/css/product.css}" rel="stylesheet">
+	<link th:href="@{/css/cart.css}" rel="stylesheet">
+	<link th:href="@{/css/thongBaoCart.css}" rel="stylesheet">
+	<link th:href="@{/css/chitietsp.css}" rel="stylesheet">
+</head>
+
+<body ng-app="shopping-cart-app" ng-controller="shopping-cart-ctrl">
+	<div class="opacity_menu"></div>
+	<!-- HEADER  -->
+	<div th:fragment="header" th:insert="~{fragments/header :: header}"></div>
+	<!--  NAVBAR  -->
+	<div th:fragment="navbar" th:insert="~{fragments/navbar :: navbar}"></div>
+	<script th:src="@{/js/nav.js}"></script>
+
+	<div th:replace="${main}"></div>
+
+	<script type="text/javascript">
+		function showRecoverPasswordForm() {
+			document.getElementById('recover-password').style.display = 'block';
+			document.getElementById('login').style.display = 'none';
+		}
+
+		function hideRecoverPasswordForm() {
+			document.getElementById('recover-password').style.display = 'none';
+			document.getElementById('login').style.display = 'block';
+		}
+
+		$('.quenmk').on('click', function () {
+			$('#login').toggleClass('hidden');
+			$('.h_recover').slideToggle();
+		});
+	</script>
+
+	<!-- FOOTER -->
+	<div th:fragment="footer" th:insert="~{fragments/footer :: footer}"></div>
+
+	<!-- BACKTOP -->
+	<a href="#" class="backtop" title="Lên đầu trang"> <svg aria-hidden="true" focusable="false" data-prefix="far"
+			data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+			class="svg-inline--fa fa-angle-up fa-w-10">
+			<path fill="currentColor"
+				d="M168.5 164.2l148 146.8c4.7 4.7 4.7 12.3 0 17l-19.8 19.8c-4.7 4.7-12.3 4.7-17 0L160 229.3 40.3 347.8c-4.7 4.7-12.3 4.7-17 0L3.5 328c-4.7-4.7-4.7-12.3 0-17l148-146.8c4.7-4.7 12.3-4.7 17 0z"
+				class></path>
+		</svg>
+	</a>
+
+	<script src="/assets/js/shopping-cart-app.js"></script>
+</body>
+
+</html>

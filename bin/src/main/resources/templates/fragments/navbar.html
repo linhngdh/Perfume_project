@@ -1,0 +1,138 @@
+<div th:fragment="navbar" xmlns:th="http://www.thymeleaf.org">
+	<div class="header-menu">
+		<div class="container">
+			<div class="row align-items-center ">
+				<div class="col-lg-3 d-lg-block d-none">
+					<div class="menu_mega indexs">
+						<div class="title_menu">
+							<span class="title_">Danh mục sản phẩm</span>
+						</div>
+						<div id="section-verticalmenu"
+							class="block block-verticalmenu float-vertical float-vertical-left">
+							<div class="aside-vetical-menu">
+								<aside class="blog-aside">
+									<div class="block_content aside-content ">
+										<div id="verticalmenu"
+											class="list_menu_header verticalmenu nav-category "
+											role="navigation">
+											<div class="ul nav vertical-nav ul_menu site-nav-vetical">
+
+												<div class="nav_item nav-item lv1 li_check ">
+													<a href title="Nước hoa nam"
+														style="background-image: url('/img/icon/icon_nuoc_hoa_nam.png')">Nước
+														hoa nam </a>
+												</div>
+
+												<div class="nav_item nav-item lv1 li_check ">
+													<a href title="Nước hoa nữ"
+														style="background-image: url('/img/icon/icon_nuoc_hoa_nu.png')">Nước
+														hoa nữ </a>
+												</div>
+
+												<div class="nav_item nav-item lv1 li_check ">
+													<a href title="Nước hoa unisex"
+														style="background-image: url('/img/icon/icon_nuoc_hoa_unisex.png')">Nước
+														hoa unisex </a>
+												</div>
+
+												<div class="nav_item nav-item lv1 li_check ">
+													<a href title="Nước hoa mini"
+														style="background-image: url('/img/icon/icon_nuoc_hoa_mini.png')">Nước
+														hoa mini </a>
+												</div>
+
+												<div class="nav_item nav-item lv1 li_check ">
+													<a href title="Nước hoa chiết"
+														style="background-image: url('/img/icon/icon_nuoc_hoa_chiet.png')">Nước
+														hoa chiết </a>
+												</div>
+												<div class="nav_item nav-item lv1 li_check ">
+													<a href title="Nước hoa chiết"
+														style="background-image: url('/img/icon/icon_nuoc_hoa_chiet.png')">Gift-set
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</aside>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-9 header-menu-des">
+					<nav class="header-nav">
+						<ul class="item_big">
+							<li class="nav-item active "><a class="a-img" th:href="@{/home/index}"
+								title="Trang chủ"> Trang chủ </a></li>
+							<li class="nav-item "><a class="a-img" th:href="@{/home/about}"
+								title="Giới thiệu"> Giới thiệu </a></li>
+							<li class="nav-item "><a class="a-img caret-down"
+								 th:href="@{/home/product}" title="Sản phẩm"> Sản phẩm </a> <i
+								class="fa fa-caret-down"></i>
+								<ul class="item_small">
+									<li><a class th:href="@{/home/productNew}" title="Sản phẩm mới">
+											Sản phẩm mới </a></li>
+									<li><a class  th:href="@{/home/productHot}"
+										title="Sản phẩm nổi bật"> Sản phẩm nổi bật </a></li>
+									<li><a class th:href="@{/home/spKhuyenMai}"
+										title="Sản phẩm khuyến mãi"> Sản phẩm khuyến mãi </a></li>
+								</ul></li>
+							<li class="nav-item "><a class="a-img caret-down"
+								 th:href="@{/home/thuongHieu}" title="Thương hiệu"> Thương hiệu </a> <i
+								class="fa fa-caret-down"></i></li>
+							<li class="nav-item "><a class="a-img caret-down" href="/"
+								title="Blog"> Blog </a> <i class="fa fa-caret-down"></i>
+								<ul class="item_small">
+									<li><a class th:href="@{/home/kienThucNuocHoa}"
+										title="  Kiến thức nước hoa"> Kiến thức nước hoa </a></li>
+									<li><a class th:href="@{/home/reviewNuocHoa}"
+										title="Review nước hoa"> Review nước hoa </a></li>
+									<li><a class th:href="@{/home/tinTucNuocHoa}"
+										title="Tin tức nước hoa"> Tin tức nước hoa </a></li>
+									<li><a class th:href="@{/home/phanBietNuocHoa}"
+										title="Phân biệt nước hoa thật"> Phân biệt nước hoa thật </a>
+									</li>
+									<li><a class th:href="@{/home/uaChuong}"
+										title="Nước hoa được ưa chuộng"> Nước hoa được ưa chuộng </a>
+									</li>
+								</ul></li>
+							<li class="nav-item "><a class="a-img" th:href="@{/home/contact}"
+								title="Liên hệ"> Liên hệ </a></li>
+							<li class="nav-item "><a class="a-img"
+								href="theodoidonhang.html" title="Theo dõi đơn hàng"> Theo
+									dõi đơn hàng </a></li>
+							<li class="account d-lg-none d-block">
+								<ul>
+
+									<li class="ng-scope"><a rel="nofollow"
+										th:href="@{/home/login}" title="Đăng nhập">Đăng nhập</a></li>
+									<li class="ng-scope"><a rel="nofollow" th:href="@{/home/register}"
+										title="Đăng ký">Đăng ký</a></li>
+
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<div class="control-menu d-lg-block d-none">
+						<a href="#" id="prev"><svg xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 384 512">
+                                <path fill="#fff"
+									d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z">
+                                </path>
+                            </svg></a> <a href="#" id="next"><svg
+								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                <path fill="#fff"
+									d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
+                                </path>
+                            </svg></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- JavaScript Libraries -->
+<script src="/js/nav.js"></script>
+
+

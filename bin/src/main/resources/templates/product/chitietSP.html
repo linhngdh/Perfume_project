@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{/layout/index :: dynamic(~{::main})}">
+
+<body>
+	<main th:object="${item}" >
+		<!-- BREAD-CRUMB  -->
+	<section class="bread-crumb">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li class="home"><a href="/"><span>Trang chủ</span></a> <span
+					class="mr_lr">&nbsp;<svg aria-hidden="true"
+							focusable="false" data-prefix="fas" data-icon="chevron-right"
+							role="img" xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 320 512"
+							class="svg-inline--fa fa-chevron-right fa-w-10">
+                                <path fill="currentColor"
+								d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+								class></path>
+                            </svg>&nbsp;
+				</span></li>
+				<li class="home"><a href="/"><span>Yves Saint
+							Laurent</span></a> <span class="mr_lr">&nbsp;<svg aria-hidden="true"
+							focusable="false" data-prefix="fas" data-icon="chevron-right"
+							role="img" xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 320 512"
+							class="svg-inline--fa fa-chevron-right fa-w-10">
+                                <path fill="currentColor"
+								d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+								class></path>
+                            </svg>&nbsp;
+				</span></li>
+
+				<li><strong><span th:text="*{product_name}"></span></strong></li>
+
+			</ul>
+		</div>
+	</section>
+	<section  class="product layout-product">
+
+		<div class="container">
+			<div class="details-product">
+				<div class="row">
+					<div class="col-lg-9 col-col-md-9 col-sm-12 col-xs-12">
+						<div class="row">
+							<div
+								class="product-detail-left product-images col-12 col-md-6 col-lg-6">
+								<div class="product-image-block relative">
+
+									<div
+										class="swiper-container gallery-top swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
+										<div class="swiper-wrapper" id="lightgallery">
+
+											<a class="swiper-slide swiper-slide-active" data-hash="0"
+												href="" title="Click để xem" style="width: 429px;"> <img
+												height="480" width="480" th:src="@{|/img/*{image}|}"
+												alt="Parfums De Marly Haltane">
+											</a> <a class="swiper-slide swiper-slide-next" data-hash="1"
+												href="" title="Click để xem" style="width: 429px;"> <img
+												height="480" width="480" src="/img/chitietsp_1_1.webp"
+												alt="Parfums De Marly Haltane">
+											</a> <a class="swiper-slide" data-hash="2" href=""
+												title="Click để xem" style="width: 429px;"> <img
+												height="480" width="480" src="/img/chitietsp_1_2.webp"
+												alt="Parfums De Marly Haltane">
+											</a> <a class="swiper-slide" data-hash="3" href=""
+												title="Click để xem" style="width: 429px;"> <img
+												height="480" width="480" src="/img/chitietsp_1.webp"
+												alt="Parfums De Marly Haltane">
+											</a> <a class="swiper-slide" data-hash="4" href=""
+												title="Click để xem" style="width: 429px;"> <img
+												height="480" width="480" src="/img/chitietsp_1_1.webp"
+												alt="Parfums De Marly Haltane">
+											</a>
+										</div>
+									</div>
+									<div
+										class="swiper-container gallery-thumbs swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-free-mode swiper-container-thumbs">
+										<div class="swiper-wrapper">
+
+											<div
+												class="swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active"
+												data-hash="0" style="width: 98.75px; margin-right: 10px;">
+												<div class="p-100">
+													<img height="80" width="80" src="/img/chitietsp_1.webp"
+														alt="Parfums De Marly Haltane">
+												</div>
+											</div>
+
+											<div
+												class="swiper-slide swiper-slide-visible swiper-slide-next"
+												data-hash="1" style="width: 98.75px; margin-right: 10px;">
+												<div class="p-100">
+													<img height="80" width="80" src="/img/chitietsp_1_1.webp"
+														alt="Parfums De Marly Haltane">
+												</div>
+											</div>
+
+											<div class="swiper-slide swiper-slide-visible" data-hash="2"
+												style="width: 98.75px; margin-right: 10px;">
+												<div class="p-100">
+													<img height="80" width="80" src="/img/chitietsp_1_2.webp"
+														alt="Parfums De Marly Haltane">
+												</div>
+											</div>
+
+											<div class="swiper-slide swiper-slide-visible" data-hash="3"
+												style="width: 98.75px; margin-right: 10px;">
+												<div class="p-100">
+													<img height="80" width="80" src="/img/chitietsp_1.webp"
+														alt="Parfums De Marly Haltane">
+												</div>
+											</div>
+
+											<div class="swiper-slide" data-hash="4"
+												style="width: 98.75px; margin-right: 10px;">
+												<div class="p-100">
+													<img height="80" width="80" src="/img/chitietsp_1_1.webp"
+														alt="Parfums De Marly Haltane">
+												</div>
+											</div>
+										</div>
+										<div class="swiper-button-next"></div>
+										<div class="swiper-button-prev swiper-button-disabled"></div>
+									</div>
+								</div>
+							</div>
+							<div class="details-pro col-12 col-md-6 col-lg-6">
+								<h1 th:text="*{product_name}" class="title-product bk-product-name"></h1>
+								
+								<div class="inventory_quantity">
+									<span class="mb-break"> <span class="stock-brand-title">Thương
+											hiệu:</span> <span class="a-vendor">Parfums De Marly </span>
+									</span> <span class="line">&nbsp;&nbsp;|&nbsp;&nbsp;</span> <span
+										class="mb-break"> <span class="stock-brand-title">Tình
+											trạng:</span> <span class="a-stock"><span class="a-stock">Còn
+												hàng</span></span>
+									</span>
+								</div>
+								<form enctype="multipart/form-data" data-cart-form=""
+									id="add-to-cart-form" action="/cart/add" method="post"
+									class="form-inline">
+
+									<div class="price-box clearfix">
+
+										<span class="special-price"> Giá: <span th:text="*{price}"
+											class="price product-price bk-product-price">₫</span>
+											<span class="compare-price">10.590.000₫ </span>
+										</span>
+
+									</div>
+
+									<div
+										class="woocommerce-product-details__short-description single-pro_attr">
+										<div class="single-attr-wrap">
+											<div class="single-attr-item">
+												<div class="single-attr-item-left fleft">
+													<strong>Độ lưu hương</strong>:
+												</div>
+												<div class="single-attr-item-right">
+													<a href=""> Rất lâu – 8 đến 12 tiếng <span>,</span>
+													</a>
+												</div>
+											</div>
+											<div class="single-attr-item">
+												<div class="single-attr-item-left fleft">
+													<strong>Giới tính</strong>:
+												</div>
+												<div class="single-attr-item-right">
+													<a href=""> Nam <span>,</span>
+													</a>
+												</div>
+											</div>
+											<div class="single-attr-item">
+												<div class="single-attr-item-left fleft">
+													<strong>Nhóm hương</strong>:
+												</div>
+												<div class="single-attr-item-right">
+													<a href=""> Trầm hương, Kẹo nhân hạt, Nhụy hoa nghệ tây
+														<span>,</span>
+													</a>
+												</div>
+											</div>
+											<div class="single-attr-item">
+												<div class="single-attr-item-left fleft">
+													<strong>Nồng độ</strong>:
+												</div>
+												<div class="single-attr-item-right">
+													<a href=""> Parfum <span>,</span>
+													</a>
+												</div>
+											</div>
+											<div class="single-attr-item">
+												<div class="single-attr-item-left fleft">
+													<strong>Phong cách</strong>:
+												</div>
+												<div class="single-attr-item-right">
+													<a href=""> Cuốn hút <span>,</span>
+													</a> <a href=""> Lịch lãm <span>,</span>
+													</a> <a href=""> Mạnh mẽ <span>,</span>
+													</a> <a href=""> Nam tính <span>,</span>
+													</a>
+												</div>
+											</div>
+											<div class="single-attr-item">
+												<div class="single-attr-item-left fleft">
+													<strong>Xuất xứ</strong>:
+												</div>
+												<div class="single-attr-item-right">
+													<a href=""> Pháp <span>,</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<div class="form-product  ">
+									<div class="select-swatch">
+										<div class="swatch clearfix" data-option-index="0">
+											<div class="header">
+												Dung Tích: <span class="value-roperties">100ml</span>
+											</div>
+											<div data-value="100ml"
+												class="swatch-element 100ml available">
+												<input id="swatch-0-100ml" type="radio" name="option-0"
+													value="100ml" checked="" class="bk-product-property">
+												<label for="swatch-0-100ml"> 100ml </label>
+											</div>
+											<div data-value="200ml"
+												class="swatch-element 200ml available">
+												<input id="swatch-0-200ml" type="radio" name="option-0"
+													value="200ml" class=""> <label for="swatch-0-200ml">
+													200ml </label>
+											</div>
+											<div data-value="10ml" class="swatch-element 10ml available">
+												<input id="swatch-0-10ml" type="radio" name="option-0"
+													value="10ml" class=""> <label for="swatch-0-10ml">
+													10ml </label>
+											</div>
+											<div data-value="SET 60ml + 10ml"
+												class="swatch-element set-60ml-10ml available">
+												<input id="swatch-0-set-60ml-10ml" type="radio"
+													name="option-0" value="SET 60ml + 10ml" class=""> <label
+													for="swatch-0-set-60ml-10ml"> SET 60ml + 10ml </label>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix form-group">
+										<div class="flex-quantity">
+											<div class="custom custom-btn-number show">
+												<strong style="font-size: 16px;">Số lượng:</strong>
+												<div class="input_number_product">
+													<button class="btn_num num_1 button button_qty"
+														type="button">−</button>
+													<input type="text" id="qtym" name="quantity" value="1"
+														maxlength="3"
+														class="form-control prd_quantity bk-product-qty">
+													<button class="btn_num num_2 button button_qty"
+														type="button">
+														<span>+</span>
+													</button>
+													<button th:attr="ng-click=@{|cart.add(${product_id})|}" type="submit"
+														class="btn btn_base normal_button btn_add_cart add_to_cart btn-cart">
+														<span class="txt-main">Thêm vào giỏ hàng</span>
+													</button>
+
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="details-pro-3 col-12 col-md-12 col-lg-3">
+						<!--  MÃ GIẢM GIÁ -->
+
+						<div th:fragment="magiamgia"
+							th:insert="~{product/magiamgia :: magiamgia}"></div>
+						<script th:src="@{/js/maGiamGia.js}"></script>
+
+						<!-- CAM KẾT -->
+						<div th:fragment="camKet" th:insert="~{product/camKet :: camKet}"></div>
+					</div>
+					<div class=" col-sm-12 col-xs-12">
+						<!-- MÔ TẢ SẢN PHẨM - CHÍNH SÁCH ĐỔI TRẢ -->
+						<div th:fragment="CSDT" th:insert="~{product/CSDT :: CSDT}"></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script th:src="@{/js/chitietsp.js}"></script>
+
+	<!-- ĐÁNH GIÁ SP -->
+	<div th:fragment="binhLuan" th:insert="~{product/binhLuan :: binhLuan}"></div>
+
+	<!-- SP LIÊN QUAN -->
+	<div th:fragment="SPLienQuan" th:insert="~{product/SPLienQuan :: SPLienQuan}"></div>
+	<script th:src="@{/js/slideproduct.js}"></script>
+	</main>
+	
+</body>
+
+</html>

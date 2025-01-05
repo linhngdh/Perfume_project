@@ -1,0 +1,14 @@
+<div xmlns:th="http://www.thymeleaf.org" class="w-100">
+<div th:fragment="danhMuc">
+	<div class="aside-content aside-content-blog">
+		<div class="title-head">Danh mục Sản Phẩm</div>
+		<nav class="nav-category">
+			<ul class="nav navbar-pills list-group form-group">
+				 <a th:each="c:${cates}" th:href="@{|/product?cid=${c.id}|}" class="list-group-item">
+                [[${c.name}]]
+            </a>
+			</ul>
+		</nav>
+	</div>
+</div>
+</div>

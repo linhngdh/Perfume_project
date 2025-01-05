@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{/layout/index :: dynamic(~{::main})}">
+
+
+<body>
+	<main>
+
+	<!-- BODY  -->
+	<div class="bodywrap">
+		<h1 class="d-none">AromaBliss</h1>
+
+		<!-- VỀ CHÚNG TÔI -->
+		<div th:fragment="vechungtoi"
+			th:insert="~{layout/vechungtoi :: vechungtoi}"></div>
+		<script th:src="@{/js/about.js}"></script>
+
+		<!-- SECTION 1 -->
+		<div th:fragment="section1" th:insert="~{layout/section1 :: section1}"></div>
+		<script th:src="@{/js/danhmuc.js}"></script>
+
+		<!-- FLASH SALE -->
+		<div th:fragment="flashSale"
+			th:insert="~{layout/flashSale :: flashSale}"></div>
+		<script th:src="@{/js/slideproduct.js}"></script>
+
+		<!-- SLIDE THƯƠNG HIỆU -->
+		<div th:fragment="slideThuongHieu"
+			th:insert="~{layout/slideThuongHieu :: slideThuongHieu}"></div>
+		<script th:src="@{/js/thuonghieu.js}"></script>
+
+		<!-- SẢN PHẨM NỔI BẬT -->
+		<div th:fragment="productNoiBat"
+			th:insert="~{layout/productNoiBat :: productNoiBat}"></div>
+
+		<!-- MÃ GIẢM GÍA -->
+		<div th:fragment="maGiamGia"
+			th:insert="~{layout/maGiamGia :: maGiamGia}"></div>
+		<script th:src="@{/js/giamgia.js}"></script>
+
+		<!-- PRODUCT NEW -->
+		<div th:fragment="maGiamGia"
+			th:insert="~{layout/productNew :: productNew}"></div>
+		<script th:src="@{/js/slideproduct.js}"></script>
+
+		<!-- BANNER PHỤ -->
+		<div th:fragment="maGiamGia"
+			th:insert="~{layout/bannerPhu :: bannerPhu}"></div>
+
+		<!-- BLOG -->
+		<div th:fragment="maGiamGia" th:insert="~{layout/blog :: blog}"></div>
+
+		<!-- BEST SELLER -->
+		<div th:fragment="maGiamGia"
+			th:insert="~{layout/bestSeller:: bestSeller}"></div>
+		<script th:src="@{/js/slideproduct.js}"></script>
+
+		<!-- SECTION 2 -->
+		<div th:fragment="maGiamGia"
+			th:insert="~{layout/section2 :: section2}"></div>
+
+	</div>
+
+	</main>
+
+</body>
+
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{/layout/index :: dynamic(~{::main})}">
+
+<body>
+<main>
+    <!-- PAGE  -->
+    <div class="wrapper" id="wrapper" style="background: #eee;padding: 15px;">
+        <div class="page">
+            <div class="main-container col1-layout no-margin-top">
+                <div class="main">
+                    <div class="col-main">
+                        <div class="container">
+                            <div class="row ">
+                                <div class="col-lg-6 col-md-12 col-sm-12 class_div">
+                                    <div id="fhs_checkout_block_address" class="fhs_checkout_block">
+                                        <div class="fhs_checkout_block_title">Địa
+                                            chỉ giao hàng</div>
+                                        <div class="fhs_checkout_block_content">
+                                            <div class="fhs_checkout_block_address_block">
+                                                <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+                                                    <label>Họ và tên
+                                                        người nhận</label>
+                                                    <div class="fhs-input-item">
+                                                        <div class="fhs-input-group">
+                                                            <div class="form-control fhs-textbox require_check check_shipping_address" id="username">[[${#request.remoteUser}]]</div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+                                                    <label>Email</label>
+                                                    <div class="fhs-input-item">
+                                                        <div class="fhs-input-group">
+                                                            <input
+                                                                class="fhs-textbox require_check check_shipping_address"
+                                                                type="text" validate_type="email"
+                                                                placeholder="Nhập email" id="fhs_shipping_email"
+                                                                name="email" value maxlength="200" />
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+                                                    <label>Số điện
+                                                        thoại</label>
+                                                    <div class="fhs-input-item">
+                                                        <div class="fhs-input-group">
+                                                            <input
+                                                                class="fhs-textbox require_check check_shipping_address"
+                                                                type="text" validate_type="shipping_telephone"
+                                                                placeholder="Ví dụ: 0979123xxx (10 ký tự số)"
+                                                                id="fhs_shipping_telephone" name="telephone" value
+                                                                maxlength="10" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+                                                    <label>Địa chỉ
+                                                        nhận hàng</label>
+                                                    <div class="fhs-input-item">
+                                                        <div class="fhs-input-group">
+                                                            <input ng-model="order.address"
+                                                                class="fhs-textbox require_check check_shipping_address"
+                                                                type="text" validate_type="text"
+                                                                placeholder="Nhập địa chỉ nhận hàng"
+                                                                id="fhs_shipping_street" name="street" value
+                                                                maxlength="500" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+                                                    <label>Ngày</label>
+                                                    <div class="fhs-input-item">
+                                                        <div class="fhs-input-group">
+                                                            <div class="fhs-textbox require_check check_shipping_address">
+                                                            {{order.createDate|date:'dd-MM-yyyy'}}
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="fhs_checkout_block_shippingmethod" class="fhs_checkout_block">
+                                        <div class="fhs_checkout_block_title">Phương
+                                            thức vận chuyển</div>
+                                        <div class="fhs_checkout_block_content">
+                                            <div class="fhs_checkout_block_radio_list">
+                                                <div id="fhs_checkout_shippingmethod_title"
+                                                    class="fhs_checkout_block_radio_list_title"></div>
+                                                <div>
+                                                    <ul id="fhs_checkout_shippingmethod"
+                                                        class="fhs_checkout_block_radio_list_items">
+                                                    </ul>
+                                                </div>
+                                                <div id="fhs_checkout_shippingmethod_msg"
+                                                    class="fhs_checkout_block_radio_list_msg">Quý
+                                                    khách vui lòng
+                                                    điền tên và địa
+                                                    chỉ giao nhận
+                                                    trước.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 class_div">
+
+                                    <!-- Payment method start -->
+                                    <div id="fhs_checkout_block_paymentmethod" class="fhs_checkout_block">
+                                        <div class="fhs_checkout_block_title">Phương
+                                            thức thanh toán</div>
+                                        <div class="fhs_checkout_block_content">
+                                            <div class="fhs_checkout_block_radio_list">
+                                                <div>
+                                                    <ul id="fhs_checkout_paymentmethod"
+                                                        class="fhs_checkout_block_radio_list_items">
+                                                        <li class="fhs_checkout_block_radio_list_item zalopayapp">
+                                                            <div class="fhs_checkout_paymentmethod_with_tutorial"
+                                                                id="tutorial_zalopayapp">
+                                                                <div class="fhs-radio-big-with-icon-container">
+                                                                    <label
+                                                                        class="fhs-radio-big fhs-raido-big-with-icon">
+                                                                        <div
+                                                                            class="fhs-payment-name-with-icon-container">
+                                                                            <div
+                                                                                style="background: url(asstes/img/icon/ico_zalopayapp.svg) no-repeat center center;width: 40px;">
+                                                                            </div>
+                                                                            <div class="fhs-payment-name">Ví
+                                                                                ZaloPay
+                                                                            </div>
+                                                                            <input type="radio"
+                                                                                id="fhs_checkout_paymentmethod_zalopayapp"
+                                                                                name="fhs_checkout_paymentmethod_option"
+                                                                                class="fhs_checkout_paymentmethod_option"
+                                                                                value="zalopayapp">
+                                                                            <span class="radiomark-big"></span>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="fhs_checkout_block_radio_list_item airpay">
+                                                            <div class="fhs_checkout_paymentmethod_with_tutorial"
+                                                                id="tutorial_airpay">
+                                                                <div class="fhs-radio-big-with-icon-container">
+                                                                    <label
+                                                                        class="fhs-radio-big fhs-raido-big-with-icon">
+                                                                        <div
+                                                                            class="fhs-payment-name-with-icon-container">
+                                                                            <div
+                                                                                style="background: url(asstes/img/icon/ico_airpay.svg) no-repeat center center;width: 40px;">
+                                                                            </div>
+                                                                            <div class="fhs-payment-name">Ví
+                                                                                ShopeePay</div>
+                                                                            <input type="radio"
+                                                                                id="fhs_checkout_paymentmethod_airpay"
+                                                                                name="fhs_checkout_paymentmethod_option"
+                                                                                class="fhs_checkout_paymentmethod_option"
+                                                                                value="airpay">
+                                                                            <span class="radiomark-big"></span>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="fhs_checkout_block_radio_list_item momopay">
+                                                            <div class="fhs_checkout_paymentmethod_with_tutorial"
+                                                                id="tutorial_momopay">
+                                                                <div class="fhs-radio-big-with-icon-container">
+                                                                    <label
+                                                                        class="fhs-radio-big fhs-raido-big-with-icon">
+                                                                        <div
+                                                                            class="fhs-payment-name-with-icon-container">
+                                                                            <div
+                                                                                style="background: url(asstes/img/icon/ico_momopay.svg) no-repeat center center;width: 40px;">
+                                                                            </div>
+                                                                            <div class="fhs-payment-name">Ví
+                                                                                Momo
+                                                                            </div>
+                                                                            <input type="radio"
+                                                                                id="fhs_checkout_paymentmethod_momopay"
+                                                                                name="fhs_checkout_paymentmethod_option"
+                                                                                class="fhs_checkout_paymentmethod_option"
+                                                                                value="momopay">
+                                                                            <span class="radiomark-big"></span>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="fhs_checkout_block_radio_list_item zalopayatm">
+                                                            <div class="fhs_checkout_paymentmethod_with_tutorial"
+                                                                id="tutorial_zalopayatm">
+                                                                <div class="fhs-radio-big-with-icon-container">
+                                                                    <label
+                                                                        class="fhs-radio-big fhs-raido-big-with-icon">
+                                                                        <div
+                                                                            class="fhs-payment-name-with-icon-container">
+                                                                            <div
+                                                                                style="background: url(asstes/img/icon/ico_zalopayatm.svg) no-repeat center center;width: 40px;">
+                                                                            </div>
+                                                                            <div class="fhs-payment-name">ATM
+                                                                                /
+                                                                                Internet
+                                                                                Banking</div>
+                                                                            <input type="radio"
+                                                                                id="fhs_checkout_paymentmethod_zalopayatm"
+                                                                                name="fhs_checkout_paymentmethod_option"
+                                                                                class="fhs_checkout_paymentmethod_option"
+                                                                                value="zalopayatm">
+                                                                            <span class="radiomark-big"></span>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="fhs_checkout_block_radio_list_item zalopaycc">
+                                                            <div class="fhs_checkout_paymentmethod_with_tutorial"
+                                                                id="tutorial_zalopaycc">
+                                                                <div class="fhs-radio-big-with-icon-container">
+                                                                    <label
+                                                                        class="fhs-radio-big fhs-raido-big-with-icon">
+                                                                        <div
+                                                                            class="fhs-payment-name-with-icon-container">
+                                                                            <div
+                                                                                style="background: url(asstes/img/icon/ico_zalopaycc.svg) no-repeat center center;width: 40px;">
+                                                                            </div>
+                                                                            <div class="fhs-payment-name">Visa
+                                                                                /
+                                                                                Master
+                                                                                /
+                                                                                JCB</div>
+                                                                            <input type="radio"
+                                                                                id="fhs_checkout_paymentmethod_zalopaycc"
+                                                                                name="fhs_checkout_paymentmethod_option"
+                                                                                class="fhs_checkout_paymentmethod_option"
+                                                                                value="zalopaycc">
+                                                                            <span class="radiomark-big"></span>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="fhs_checkout_block_radio_list_item cashondelivery">
+                                                            <div class="fhs_checkout_paymentmethod_with_tutorial"
+                                                                id="tutorial_cashondelivery">
+                                                                <div class="fhs-radio-big-with-icon-container">
+                                                                    <label
+                                                                        class="fhs-radio-big fhs-raido-big-with-icon">
+                                                                        <div
+                                                                            class="fhs-payment-name-with-icon-container">
+                                                                            <div
+                                                                                style="background: url(asstes/img/icon/ico_cashondelivery.svg) no-repeat center center;width: 40px;">
+                                                                            </div>
+                                                                            <div class="fhs-payment-name">Thanh
+                                                                                toán
+                                                                                bằng
+                                                                                tiền
+                                                                                mặt
+                                                                                khi
+                                                                                nhận
+                                                                                hàng
+                                                                            </div>
+                                                                            <input type="radio"
+                                                                                id="fhs_checkout_paymentmethod_cashondelivery"
+                                                                                name="fhs_checkout_paymentmethod_option"
+                                                                                class="fhs_checkout_paymentmethod_option"
+                                                                                value="cashondelivery" checked>
+                                                                            <span class="radiomark-big"></span>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="fhs_checkout_block_loading">
+                                                        <div>
+                                                            <div id="default-icon-loading"
+                                                                style="height: 40px; width: 40px; background: url('') no-repeat center center transparent; background-size: 40px;">
+                                                            </div>
+                                                        </div>
+                                                    </div> -->
+                                        </div>
+                                        <!-- <div class="fhs_checkout_block_alert"></div> -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="fhs_checkout_block fhs_checkout_block_coupon_desktop">
+                                <div class="fhs_checkout_block_title">Mã
+                                    khuyến mãi/Mã quà tặng</div>
+                                <div class="fhs_checkout_block_content">
+                                    <div class="fhs_checkout_block_address_block">
+                                        <div class="fhs-input-box fhs-input-btn fhs-input-group-horizontal-coupon">
+                                            <label>Mã KM/Quà tặng</label>
+                                            <div class="fhs-input-item">
+                                                <div class="fhs-input-group">
+                                                    <input class="fhs-textbox fhs_checkout_coupon" type="text"
+                                                        validate_type="text" placeholder="Nhập mã khuyến mãi/Quà tặng"
+                                                        id="fhs_checkout_coupon" name="coupon" value maxlength="200" />
+                                                    <span id="fhs_checkout_btn_coupon"
+                                                                    class=" fhs-input-icon">Áp
+                                                        dụng</span>
+                                                    <div class="fhs_checkout_block_coupon_search"><span>Chọn
+                                                            mã
+                                                            khuyến
+                                                            mãi</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="fhs_label_note">
+                                                <div class="fhs_label_coupon_label_info">
+                                                    <div>Có thể áp
+                                                        dụng đồng
+                                                        thời nhiều
+                                                        mã </div>
+                                                    <div class="fhs_tooltip" style="margin-left: 0.25em;">
+                                                        <img src="asstes/img/icon/ico-alert-grey.svg" /><span>Áp
+                                                            dụng tối
+                                                            đa 1 mã
+                                                            giảm giá
+                                                            <br />và
+                                                            1 mã
+                                                            freeship</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="fhs-input-alert"></div> -->
+                                        </div>
+                                    </div>
+                                    <!-- <div class="fhs_checkout_block_loading">
+                                                <div>
+                                                    <div id="default-icon-loading"
+                                                        style="height: 40px; width: 40px; background: url('') no-repeat center center transparent; background-size: 40px;">
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                </div>
+                            </div>
+                            <div class="fhs_checkout_block fhs_checkout_block_coupon_mobile">
+                                <div class="fhs_checkout_block_title">
+                                    <img style="padding-right: 8px;" src="asstes/img/icon/ico_coupon_orange.svg">
+                                    <span>Chọn mã khuyến mãi</span>
+                                    <div class="fhs_checkout_block_title_icon_viewmore"><img
+                                            src="asstes/img/icon/chevron-right.svg">
+                                    </div>
+                                </div>
+                                <div class="fhs_checkout_block_content" style="display:none;">
+                                    <div class="fhs_label_coupon_label"></div>
+                                </div>
+                            </div>
+
+                            <!-- checkout start -->
+                            <div class="fhs_checkout_block">
+                                <div class="fhs_checkout_block_title">Kiểm
+                                    tra lại đơn hàng</div>
+                                <div class="fhs_checkout_block_content">
+                                    <div class="cart-page d-xl-block d-none">
+							<div class="drawer__inner">
+								<div class="CartPageContainer">
+
+									<form action="/cart" method="post" novalidate=""
+										class="cart ajaxcart cartpage">
+										<div class="cart-header-info">
+											<div>Thông tin sản phẩm</div>
+											<div>Đơn giá</div>
+											<div>Số lượng</div>
+											<div>Thành tiền</div>
+										</div>
+										<div ng-repeat="item in cart.items" class="ajaxcart__inner ajaxcart__inner--has-fixed-footer cart_body items">
+											<div class="ajaxcart__row">
+												<div class="ajaxcart__product cart_product" data-line="1">
+													<a href="" class="ajaxcart__product-image cart_image"
+														title="Calvin Klein CK Everyone Eau de Parfum"><img
+														src="/img/product/{{item.image}}"
+														alt="Calvin Klein CK Everyone Eau de Parfum"></a>
+													<div class="grid__item cart_info">
+														<div class="ajaxcart__product-name-wrapper cart_name">
+															<a href="" class="ajaxcart__product-name h4"
+																title="">{{item.product_name}}</a> 
+															<a ng-click="cart.remove(item.id)"
+																class="cart__btn-remove remove-item-cart ajaxifyCart--remove"
+																href="" data-line="1">Xóa</a>
+
+														</div>
+														<div class="grid">
+															<div class="grid__item one-half text-right cart_prices">
+																<span class="cart-price">${{item.price | number : 2}}</span>
+
+															</div>
+														</div>
+														<div class="grid">
+															<div class="grid__item one-half cart_select">
+																<div class="ajaxcart__qty input-group-btn">
+																	<button type="button"
+																		class="ajaxcart__qty-adjust ajaxcart__qty--minus items-count"
+																		data-id="" data-qty="0" data-line="1" aria-label="-">
+																		-</button>
+																	<input type="number" name="updates[]" ng-change="cart.saveToLocalStorage()" ng-model="item.qty"
+																		class="ajaxcart__qty-num number-sidebar" maxlength="3"
+																		value="1" min="0" data-id="" data-line="1"
+																		aria-label="quantity" pattern="[0-9]*">
+																	<button type="button"
+																		class="ajaxcart__qty-adjust ajaxcart__qty--plus items-count"
+																		data-id="" data-line="1" data-qty="2" aria-label="+">
+																		+</button>
+																</div>
+															</div>
+														</div>
+														<div class="grid">
+															<div class="grid__item one-half text-right cart_prices">
+																<span class="cart-price">${{item.qty*item.price|number:2}}</span>
+
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+										
+									</form>
+
+								</div>
+
+							</div>
+						</div>
+                                    
+                                    <!-- <div class="fhs_checkout_total fhs_checkout_total_mobile">
+                                                <div class='fhs_checkout_total_grand_total'></div>
+                                            </div> -->
+                                </div>
+                            </div>
+                            <div class="fhs-bsidebar">
+                                <div class="fhs-bsidebar-content">
+                                    <div class="container">
+                                        <div class="fhs_checkout_total fhs_checkout_total_desktop">
+                                            <div class="fhs_checkout_total_subtotal">
+                                                <div>Thành tiền</div>
+                                                <div>{{cart.amount|number:2}}đ</div>
+                                            </div>
+                                            <div class="fhs_checkout_total_shipping">
+                                                <div>Phí
+                                                    vận chuyển (Giao
+                                                    hàng tiêu chuẩn)
+                                                </div>
+                                                <div>00.000 đ</div>
+                                            </div>
+                                            <div class="fhs_checkout_total_grand_total">
+                                                <div>Tổng
+                                                    Số Tiền (gồm
+                                                    VAT)
+                                                </div>
+                                                <div>{{cart.amount|number:2}}đ</div>
+                                            </div>
+                                        </div>
+                                        <div class="fhs_checkout_bottom">
+                                            <div>
+                                                <div class="fhs_checkout_total_grand_total">
+                                                    <div>Tổng
+                                                        Số Tiền (gồm
+                                                        VAT)</div>
+                                                    <div>119.800
+                                                        đ</div>
+                                                </div>
+                                                <div><a href="cart.html"><span style="padding-right: 8px;"><img
+                                                                src="asstes/img/icon/btn_back.svg"></span><span>Quay
+                                                            về giỏ
+                                                            hàng</span></a></div>
+                                            </div>
+                                            <div>
+                                                <div class="fhs-btn-box">
+                                                    <button  ng-click="order.purchase()"
+                                                    	type="button" title="Xác nhận thanh toán"
+                                                        class="fhs-btn-confirm fhs-btn-orderconfirm"><span>Xác
+                                                            nhận
+                                                            thanh
+                                                            toán</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+
+</html>

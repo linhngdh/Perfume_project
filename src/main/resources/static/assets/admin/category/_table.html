@@ -1,0 +1,65 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="app-title">
+			<ul class="app-breadcrumb breadcrumb side">
+				<li class="breadcrumb-item active"><a href="#"><b>QUẢN
+							LÝ DANH MỤC</b></a></li>
+			</ul>
+			<div id="clock"></div>
+		</div>
+	</div>
+
+	<div class="tile">
+		<div style="text-align: right;">
+	<!-- 		<label
+				style="font-weight: 600; white-space: nowrap; text-align: left; background: white; color: black; padding: 10px; border-radius: 0.357rem; border: 1px solid #ddd;">Tìm
+				kiếm: <input
+				style="margin-left: 0.5em; display: inline-block; width: auto; height: 30px; font-weight: 600;"
+				type="text" id="myInput" ng-keyup="searchAccount(info)"
+				ng-model="info" class="form-control" placeholder="">
+			</label>
+		</div> -->
+		<table class="table table-condensed">
+			<thead class="bg-danger" >
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="itemc in pager.categories_items">
+
+					<td>{{itemc.id}}</td>
+					<td>{{itemc.name}}</td>
+					<td>
+						<div class="btn-group btn-group-xs">
+							<button ng-click="edit(itemc)" data-toggle="tab"
+								data-target="#edit"
+								class="btn btn-warning glyphicon glyphicon-edit"></button>
+							<button ng-click="delete(itemc)"
+								class="btn btn-danger glyphicon glyphicon-trash"></button>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+	<div class="panel-footer text-center">
+		<button ng-click="pager.first()" class="btn btn-danger">
+			<b class="glyphicon glyphicon-hand-up"></b>
+		</button>
+		<button ng-click="pager.prev()" class="btn btn-dark">
+			<b class="glyphicon glyphicon-hand-left"></b>
+		</button>
+		<button class="btn btn-success">{{pager.page + 1}} of
+			{{pager.count}}</button>
+		<button ng-click="pager.next()" class="btn btn-dark">
+			<b class="glyphicon glyphicon-hand-right"></b>
+		</button>
+		<button ng-click="pager.last()" class="btn btn-danger">
+			<b class="glyphicon glyphicon-hand-down"></b>
+		</button>
+	</div>
+</div>

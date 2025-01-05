@@ -1,0 +1,17 @@
+<ul class="nav nav-tabs" style="font-weight:700; font-family: 'Times New Roman', Times, serif">
+   
+    <li class="active">
+        <a data-toggle="tab" data-target="#list" style="cursor: pointer;">LIST OF ORDER</a>
+    </li>
+     <li>
+        <a data-toggle="tab" data-target="#edit" style="cursor: pointer;">ORDER EDITION</a>
+    </li>
+</ul>
+<div class="tab-content">
+    <div id="edit" class="tab-pane fade">
+        <div ng-include="'/assets/admin/order/_form.html'"></div>
+    </div>
+    <div id="list" class="tab-pane fade in active">
+        <div ng-include="'/assets/admin/order/_table.html'"></div>
+    </div>
+</div>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link rel="stylesheet"
+	th:href="@{/bootstrap-5.3.2-dist/css/bootstrap.min.css}">
+<script th:src="@{/bootstrap-5.3.2-dist/js/bootstrap.min.js}"></script>
+
+<link th:href="@{/img/x-icon}" rel="icon">
+
+<!-- MAIN JS  -->
+<script th:src="@{/js/jquery.js}"></script>
+<script th:src="@{/js/swiper.js}"></script>
+<script th:src="@{/js/lazy.js}"></script>
+<script th:src="@{/js/backtop.js}"></script>
+
+
+<!-- MAIN CSS  -->
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+<link th:href="@{/css/swiper.css}" rel="stylesheet">
+<link th:href="@{/css/index.css}" rel="stylesheet">
+<link th:href="@{/css/main.css}" rel="stylesheet">
+<link th:href="@{/css/product.css}" rel="stylesheet">
+<link th:href="@{/css/cart.css}" rel="stylesheet">
+<link th:href="@{/css/thongBaoCart.css}" rel="stylesheet">
+</head>
+
+<body>
+	<div class="opacity_menu"></div>
+	<!-- HEADER  -->
+	<div th:fragment="header" th:insert="~{fragments/header :: header}"></div>
+
+	<!--  NAVBAR  -->
+	<div th:fragment="navbar" th:insert="~{fragments/navbar :: navbar}"></div>
+	<script th:src="@{/js/nav.js}"></script>
+
+	<!-- FAGE -->
+	<section class="bread-crumb">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li class="home"><a href="/"><span>Trang chủ</span></a> <span
+					class="mr_lr">&nbsp;<svg aria-hidden="true"
+							focusable="false" data-prefix="fas" data-icon="chevron-right"
+							role="img" xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 320 512"
+							class="svg-inline--fa fa-chevron-right fa-w-10">
+                                    <path fill="currentColor"
+								d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+								class></path>
+                                </svg>&nbsp;
+				</span></li>
+
+				<li><strong><span>Giới thiệu</span></strong></li>
+
+			</ul>
+		</div>
+	</section>
+	<!-- PAGE  -->
+	<section class="page">
+		<div class="container">
+			<div class="pg_page padding-top-15">
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="page-title category-title">
+							<!-- <h1 class="title-head">Giới thiệu</h1> -->
+							<span class="title_we"> AromaBliss </span>
+						</div>
+						<div class="content-page rte">
+
+							<p>
+								Chào mừng bạn đến với <strong style="font-style: italic;">AromaBliss</strong>
+								- nền tảng mua sắm nước hoa trực tuyến đáng tin cậy! Chúng tôi
+								tự hào là địa chỉ tuyệt vời cho những người yêu thích nước hoa
+								và mong muốn tìm kiếm những mùi hương độc đáo và tinh tế.
+							</p>
+							<p>
+								<strong style="font-style: italic;">AromaBliss</strong> mang đến
+								cho bạn một trải nghiệm mua sắm nước hoa trực tuyến thuận tiện
+								và đáng tin cậy. Với một bộ sưu tập đa dạng gồm hàng trăm thương
+								hiệu nổi tiếng và các loại nước hoa cao cấp, chúng tôi cam kết
+								đáp ứng nhu cầu của cả những khách hàng khó tính nhất.
+							</p>
+							<p>
+								Tại <strong style="font-style: italic;">AromaBliss</strong>,
+								chúng tôi hiểu rằng mùi hương là một cách để thể hiện cá nhân và
+								tạo dấu ấn riêng của bạn. Vì vậy, chúng tôi cung cấp cho bạn một
+								môi trường mua sắm trực tuyến thân thiện và dễ sử dụng, giúp bạn
+								dễ dàng tìm thấy mùi hương phù hợp với phong cách và cá nhân của
+								mình.
+							</p>
+							<p>Với chất lượng sản phẩm là ưu tiên hàng đầu, chúng tôi chỉ
+								cung cấp nước hoa từ các nhà sản xuất và thương hiệu uy tín trên
+								toàn thế giới. Bạn có thể tìm thấy những tên tuổi lừng danh như
+								Chanel, Dior, Gucci, Tom Ford, và nhiều hơn nữa trong danh mục
+								sản phẩm của chúng tôi. Tất cả các sản phẩm đều được chăm chút
+								kỹ lưỡng và đảm bảo chất lượng cao nhất.</p>
+							<p>
+								Đặc biệt, <strong style="font-style: italic;">AromaBliss</strong>
+								cũng cung cấp các dịch vụ chăm sóc khách hàng tận tâm. Đội ngũ
+								chuyên gia của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá
+								trình mua sắm và tư vấn về các sản phẩm nước hoa. Chúng tôi cam
+								kết đáp ứng nhanh chóng mọi yêu cầu và đảm bảo bạn có trải
+								nghiệm mua sắm trực tuyến thoải mái và vui vẻ.
+							</p>
+							<p>
+								Hãy truy cập <strong style="font-style: italic;">AromaBliss</strong>
+								ngay hôm nay để khám phá một thế giới nước hoa tuyệt vời và tìm
+								kiếm mùi hương hoàn hảo cho bản thân. Chúng tôi hy vọng sẽ mang
+								đến cho bạn niềm vui và sự tự tin thông qua mỗi chai nước hoa
+								bạn chọn.
+							</p>
+
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<img src="/img/banner_gt.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<div th:fragment="footer" th:insert="~{fragments/footer :: footer}"></div>
+
+	<!-- BACKTOP -->
+	<a href="#" class="backtop" title="Lên đầu trang"> <svg
+			aria-hidden="true" focusable="false" data-prefix="far"
+			data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 320 512" class="svg-inline--fa fa-angle-up fa-w-10">
+                <path fill="currentColor"
+				d="M168.5 164.2l148 146.8c4.7 4.7 4.7 12.3 0 17l-19.8 19.8c-4.7 4.7-12.3 4.7-17 0L160 229.3 40.3 347.8c-4.7 4.7-12.3 4.7-17 0L3.5 328c-4.7-4.7-4.7-12.3 0-17l148-146.8c4.7-4.7 12.3-4.7 17 0z"
+				class></path>
+            </svg>
+	</a>
+</body>
+
+</html>

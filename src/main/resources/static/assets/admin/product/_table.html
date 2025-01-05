@@ -1,0 +1,84 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="app-title">
+			<ul class="app-breadcrumb breadcrumb side">
+				<li class="breadcrumb-item active"><a href="#"><b>QUẢN
+							LÝ SẢN PHẨM</b></a></li>
+			</ul>
+			<div id="clock"></div>
+		</div>
+	</div>
+    <!-- <div class="panel-heading">
+        <div style="display:flex">
+            <div class="col-md-8">
+                <div class="float-left">PRODUCT LIST</div>
+            </div>
+            <div class="col-md-4" style="display:flex">
+                <input type="text" class="form-control" placeholder="Can you find products here!" style="width:300px;margin-right: 10px;" ng-model="search">
+                <button class="btn btn-info" ng-click="searchProduct(search)"><b class="glyphicon glyphicon-search"></b></button>
+            </div>
+        </div>
+    </div> -->
+    
+    <div class="tile">
+		<div style="text-align: right;">
+			<label
+				style="font-weight: 600; white-space: nowrap; text-align: left; background: white; color: black; padding: 10px; border-radius: 0.357rem; border: 1px solid #ddd;">Tìm
+				kiếm: <input
+				style="margin-left: 0.5em; display: inline-block; width: auto; height: 30px; font-weight: 600;"
+				type="text" id="myInput" ng-keyup="searchProduct(info)"
+				ng-model="info" class="form-control" placeholder="">
+			</label>
+		</div>
+		<table class="table table-condensed">
+        <thead class="bg-danger" style="font-variant:small-caps;">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Date</th>
+                <th>Image</th>
+                <th>Trademark</th>
+                <th>Category</th>
+                
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in pager.items">
+                <td>{{item.product_id}}</td>
+                <td>{{item.product_name}}</td>
+                <td>{{item.price|number:2}}</td>
+                <td>{{item.createDate|date:'dd-MM-yyyy'}}</td>
+                <td>{{item.image}}</td>
+                <td>{{item.brand.trademark}}</td>
+                <td>{{item.category.name}}</td>
+                
+                <td>
+                    <div class="btn-group btn-group-xs">
+                        <button ng-click="edit(item)" data-toggle="tab" data-target="#edit" class="btn btn-warning glyphicon glyphicon-edit"></button>
+                        <button ng-click="delete(item)" class="btn btn-danger glyphicon glyphicon-trash"></button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+	</div>
+    
+    <div class="panel-footer text-center">
+        <button ng-click="pager.first()" class="btn btn-danger">
+            <b class="glyphicon glyphicon-hand-up"></b>
+        </button>
+        <button ng-click="pager.prev()" class="btn btn-dark">
+            <b class="glyphicon glyphicon-hand-left"></b>
+        </button>
+        <button class="btn btn-success">{{pager.page + 1}} of {{pager.count}}</button>
+        <button ng-click="pager.next()" class="btn btn-dark">
+            <b class="glyphicon glyphicon-hand-right"></b>
+        </button>
+        <button ng-click="pager.last()" class="btn btn-danger">
+            <b class="glyphicon glyphicon-hand-down"></b>
+        </button>
+    </div>
+</div>

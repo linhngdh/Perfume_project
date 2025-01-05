@@ -1,0 +1,16 @@
+<ul class="nav nav-tabs" style="font-weight:700; font-family: 'Times New Roman', Times, serif">
+    <li>
+        <a data-toggle="tab" data-target="#edit" style="cursor: pointer;"> ACCOUNT ADMIN</a>
+    </li>
+    <li class="active">
+        <a data-toggle="tab" data-target="#list" style="cursor: pointer;">ALL ACCOUNT</a>
+    </li>
+</ul>
+<div class="tab-content">
+    <div id="edit" class="tab-pane fade">
+        <div ng-include="'/assets/admin/authority/admin.html'"></div>
+    </div>
+    <div id="list" class="tab-pane fade in active">
+        <div ng-include="'/assets/admin/authority/all.html'"></div>
+    </div>
+</div>

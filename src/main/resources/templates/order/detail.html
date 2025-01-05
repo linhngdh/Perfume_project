@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{/layout/index :: dynamic(~{::main})}">
+
+<body>
+    <main class="container" id="olp_panel_id-0.7048213575205231">
+        <div class="panel panel-primary">
+            <div class="panel-heading">ORDER INFORMATION</div>
+            <div th:object="${order}" class="panel-body">
+                <div class="row">
+                    <div class="form-group col-sm-12">
+                        <div>Order Number:</div>
+                        <input type="text" th:field="*{id}" readonly class="form-control">
+                    </div>                 
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-12">
+                        <div>Usename:</div>
+                        <input type="text" th:field="*{account.username}" name="" id="" class="form-control" readonly>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-12">
+                        <div>Shipping Address:</div>
+                        <textarea th:field="*{address}" id="" class="form-control" readonly></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div>
+            <div class="hiXKxx" style="border:1px solid #eee">
+                <div th:object="${order}">
+                    <div class="x0QT2k">
+                        <div>
+                            <div class="KrPQEI">
+                                <div class="qCUYY8"></div>
+                                <div class="EQko8g">
+                                    <div class="qP6Mvo">
+                                        <a class="KmBIg2" href="">
+                                            <span class="nkmfr2">
+                                                <svg enable-background="new 0 0 15 15" viewBox="0 0 15 15" x="0" y="0"
+                                                    class="shopee-svg-icon icon-free-shipping-line">
+                                                    <g>
+                                                        <line fill="none" stroke-linejoin="round" stroke-miterlimit="10"
+                                                            x1="8.6" x2="4.2" y1="9.8" y2="9.8"></line>
+                                                        <circle cx="3" cy="11.2" fill="none" r="2"
+                                                            stroke-miterlimit="10"></circle>
+                                                        <circle cx="10" cy="11.2" fill="none" r="2"
+                                                            stroke-miterlimit="10"></circle>
+                                                        <line fill="none" stroke-miterlimit="10" x1="10.5" x2="14.4"
+                                                            y1="7.3" y2="7.3"></line>
+                                                        <polyline fill="none"
+                                                            points="1.5 9.8 .5 9.8 .5 1.8 10 1.8 10 9.1"
+                                                            stroke-linejoin="round" stroke-miterlimit="10"></polyline>
+                                                        <polyline fill="none"
+                                                            points="9.9 3.8 14 3.8 14.5 10.2 11.9 10.2"
+                                                            stroke-linejoin="round" stroke-miterlimit="10"></polyline>
+                                                    </g>
+                                                </svg> Đơn hàng đã được giao thành công</span>
+                                        </a>
+                                        <div class="shopee-drawer" id="pc-drawer-id-15" tabindex="0"><svg
+                                                enable-background="new 0 0 15 15" viewBox="0 0 15 15" x="0" y="0"
+                                                class="shopee-svg-icon icon-help">
+                                                <g>
+                                                    <circle cx="7.5" cy="7.5" fill="none" r="6.5"
+                                                        stroke-miterlimit="10">
+                                                    </circle>
+                                                    <path
+                                                        d="m5.3 5.3c.1-.3.3-.6.5-.8s.4-.4.7-.5.6-.2 1-.2c.3 0 .6 0 .9.1s.5.2.7.4.4.4.5.7.2.6.2.9c0 .2 0 .4-.1.6s-.1.3-.2.5c-.1.1-.2.2-.3.3-.1.2-.2.3-.4.4-.1.1-.2.2-.3.3s-.2.2-.3.4c-.1.1-.1.2-.2.4s-.1.3-.1.5v.4h-.9v-.5c0-.3.1-.6.2-.8s.2-.4.3-.5c.2-.2.3-.3.5-.5.1-.1.3-.3.4-.4.1-.2.2-.3.3-.5s.1-.4.1-.7c0-.4-.2-.7-.4-.9s-.5-.3-.9-.3c-.3 0-.5 0-.7.1-.1.1-.3.2-.4.4-.1.1-.2.3-.3.5 0 .2-.1.5-.1.7h-.9c0-.3.1-.7.2-1zm2.8 5.1v1.2h-1.2v-1.2z"
+                                                        stroke="none">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="V+w7Xs" tabindex="0">Hoàn thành</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="FycaKn"></div>
+                        <div>
+                            <div>
+                                <div class="_0OiaZ-" th:each="detail:*{orderDetails}" th:object="${detail}">
+                                    <div class="FbLutl">
+                                        <div>
+                                            <div>
+                                                <div class="x7nENX">
+                                                    <div class="aybVBK">
+                                                        <img th:src="@{|/img/product/*{product.image}}" class="rGP9Yd" alt=""
+                                                            tabindex="0">
+                                                        <div class="_7uZf6Q">
+                                                            <div>
+                                                            <div class="iJlxsT">
+                                                                    <span class="x5GTyN" tabindex="0"></span>
+                                                                </div>
+                                                                <div class="iJlxsT">
+                                                                    <span class="x5GTyN" tabindex="0">[[*{product.product_name}]]</span>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div class="vb0b-P" tabindex="0">Phân loại hàng:50ml
+                                                                </div>
+                                                                <div class="_3F1-5M" tabindex="0">x[[*{quantity}]]</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="_9UJGhr" tabindex="0">
+                                                        <div class="rjqzk1"><span class="j2En5+">₫100.000</span><span
+                                                                class="-x3Dqh OkfGBc">₫[[*{#numbers.formatDecimal(price*quantity,0,'COMMA',2,'POINT')}]]</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div th:object="${thanhTien}" class="haha" style="border: 1px solid #eee;">
+                    <div class="kvXy0c">
+                        <div class="-78s2g">
+                            <label class="_0NMXyN">Thành tiền:</label>
+                            <div class="DeWpya" tabindex="0" aria-label="Thành tiền: ₫145.700">[[*{#numbers.formatDecimal(doubleValue,0,'COMMA',2,'POINT')}]]đ</div>
+                        </div>
+                    </div>
+                    <div class="AM4Cxf">
+                        <div class="qtUncs"></div>
+                        <section class="EOjXew">
+                            <h3 class="a11y-hidden"></h3>
+                            <div class="PF0-AU">
+                                <div><button class="stardust-button stardust-button--primary WgYvse">Mua lại</button>
+                                </div>
+                            </div>
+                            <div class="PgtIur">
+                                <div><button class="stardust-button stardust-button--secondary WgYvse">Liên hệ Người
+                                        bán</button></div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>

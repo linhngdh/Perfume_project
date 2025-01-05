@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{/layout/index :: dynamic(~{::main})}">
+
+<body >
+    <main>
+        <div class="panel panel-primary container">
+            <div class="panel-heading">YOUR ORDERS PURCHASED</div>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Order No.</th>
+                        <th>Order Date</th>
+                        <th>Shipping Address</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="order, state:${orders}">
+                        <td th:text="${state.index}"></td>
+                        <td th:text="${order.id}"></td>
+                        <td th:text="${order.createDate}"></td>
+                        <td th:text="${order.address}"></td>
+                        <td>
+                            <form th:action="@{|/order/updateStatus/${order.id}|}" method="post">
+                                <select name="newStatus" th:disabled="${order.status ne 'Chờ xác nhận'}" 
+                                style="width: 150px;" onchange="this.form.submit()">
+                                    <option value="Chờ xác nhận" th:selected="${order.status eq 'Chờ xác nhận'}"
+                                        th:text="${order.status}"></option>
+                                    <option value="Hủy" th:selected="${order.status eq 'Hủy'}">Hủy</option>
+                                    <!-- Thêm các trạng thái khác tại đây -->
+                                </select>
+                                
+                            </form>
+                            <span th:if="${order.status eq 'Hủy'}" class="text-danger">Đã Hủy</span>
+                        </td>
+                        <td>
+                            <a th:href="@{|/order/detail/${order.id}|}" class="btn btn-default">
+                                Xem
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>

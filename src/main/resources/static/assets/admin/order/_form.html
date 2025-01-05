@@ -1,0 +1,23 @@
+<!-- Một số phần HTML khác -->
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <!-- Thêm các cột khác nếu cần -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="orderDetail in orderDetails">
+            <td>{{ orderDetail.id }}</td>
+            <td>{{ orderDetail.product.product_name }}</td>
+            <td>{{ orderDetail.price}}</td>
+            <td>{{ orderDetail.quantity}}</td>
+            
+            <!-- Thêm các cột khác nếu cần -->
+        </tr>
+    </tbody>
+</table>
+<!-- Một số phần HTML khác -->
